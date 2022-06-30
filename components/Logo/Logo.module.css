@@ -1,0 +1,13 @@
+.Logo {
+  flex: 0 0 60px;
+  height: 60px; 
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.Logo img {
+  width: 100%;
+}
