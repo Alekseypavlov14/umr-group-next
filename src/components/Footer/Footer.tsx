@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { Container } from '../Container/Container'
 import { Anchor } from '../Anchor/Anchor'
+import Link from 'next/link'
 import styles from './Footer.module.css'
 
 interface FooterProps {}
@@ -16,43 +17,38 @@ const Footer: FC<FooterProps> = () => {
           <div className={styles.Footer__Column}>
             <div className={styles.Footer__Column__Title}>Навігація</div>
             <div className={styles.Footer__Row}>
-              <Link 
-                className={styles.Footer__Row__Link} 
-                to='/'
-              >
-                Головна
+              <Link href='/'>
+                <a className={styles.Footer__Row__Link}>
+                  Головна
+                </a>
               </Link>
             </div>
             <div className={styles.Footer__Row}>
-              <Link 
-                className={styles.Footer__Row__Link} 
-                to='/order'
-              >
-                Замовити
+              <Link href='/order'>
+                <a className={styles.Footer__Row__Link}>
+                  Замовити
+                </a>
               </Link>
             </div>
             <div className={styles.Footer__Row}>
-              <Link 
-                className={styles.Footer__Row__Link} 
-                to='/translators'
-              >
-                Перекладачі
+              <Link href='/translators'>
+                <a className={styles.Footer__Row__Link}>
+                  Перекладачі
+                </a>
               </Link>
             </div>
             <div className={styles.Footer__Row}>
-              <Link 
-                className={styles.Footer__Row__Link} 
-                to='/about'
-              >
-                О нас
+              <Link href='/about'>
+                <a className={styles.Footer__Row__Link}>
+                  О нас
+                </a>
               </Link>
             </div>
             <div className={styles.Footer__Row}>
-              <Link 
-                className={styles.Footer__Row__Link} 
-                to='/contacts'
-              >
+              <Link href='/contacts'>
+                <a className={styles.Footer__Row__Link}>
                 Контакти
+                </a>
               </Link>
             </div>
           </div>

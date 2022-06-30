@@ -1,0 +1,11 @@
+:root {
+  --white: #f7dcb5;
+  --blue-100: #283abf;
+  --blue-200: #4285f4;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+}
+
