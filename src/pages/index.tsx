@@ -2,7 +2,7 @@ import { Layout } from "../components/Layout/Layout"
 import { TextBlock } from "../components/TextBlock/TextBlock"
 import { Section } from "../components/Section/Section"
 import Link from "next/link"
-import styles from './../styles/Home.module.css'
+import styles from './../styles/pages/Home.module.css'
 
 export default function Home() {
   return (

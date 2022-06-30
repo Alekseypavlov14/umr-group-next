@@ -1,7 +1,7 @@
 import { Layout } from "../components/Layout/Layout"
 import { Container } from "../components/Container/Container"
 import { Contact } from "../components/Contact/Contact"
-import styles from './../styles/Contacts.module.css'
+import styles from './../styles/pages/Contacts.module.css'
 
 export default function About() {
   return (
