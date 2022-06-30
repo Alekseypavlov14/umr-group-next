@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useAppDispatch, useAppSelector } from './../../app/hooks'
 import { 
   isOpenedSelector,
   open,
@@ -11,8 +11,8 @@ import styles from './BurgerButton.module.css'
 interface BurgerButtonProps {}
 
 const BurgerButton: FC<BurgerButtonProps> = () => {
-  const isOpened = useSelector(isOpenedSelector)
-  const dispatch = useDispatch()
+  const isOpened = useAppSelector(isOpenedSelector)
+  const dispatch = useAppDispatch()
 
   function toggleMenu() {
     if (isOpened) return dispatch(close())

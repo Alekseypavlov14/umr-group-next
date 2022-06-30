@@ -1,0 +1,26 @@
+.Section:nth-child(odd) {
+  background: #FAFBFD;
+}
+
+.Image {
+  max-width: 100%;
+  margin: 0px auto;
+}
+
+.OrderLinkContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.OrderLink {
+  align-self: center;
+  width: fit-content;
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid var(--blue-200);
+  background-color: var(--blue-200);
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}

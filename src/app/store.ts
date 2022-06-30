@@ -1,18 +1,23 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
-import { menuReducer } from '../features/menu/menuSlice'
+import { menuReducer } from './../features/menu/menuSlice'
 
-export const store = configureStore({
-  reducer: {
-    menu: menuReducer
-  }
-})
+export function makeStore() {
+  return configureStore({
+    reducer: { menu: menuReducer },
+  })
+}
+
+const store = makeStore()
 
 export type AppState = ReturnType<typeof store.getState>
+
 export type AppDispatch = typeof store.dispatch
-export type RootState = ReturnType<typeof store.getState>
+
 export type AppThunk<ReturnType = void> = ThunkAction<
   ReturnType,
-  RootState,
+  AppState,
   unknown,
   Action<string>
 >
+
+export default store

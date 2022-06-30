@@ -1,5 +1,5 @@
-import { RootState } from './../../app/store'
-import { createSlice} from '@reduxjs/toolkit'
+import { AppState } from './../../app/store'
+import { createSlice } from '@reduxjs/toolkit'
 
 interface initialStateInterface {
   isOpened: boolean
@@ -24,4 +24,4 @@ const menuSlice = createSlice({
 
 export const menuReducer = menuSlice.reducer
 export const { open, close } = menuSlice.actions
-export const isOpenedSelector = (state: RootState) => state.menu.isOpened
+export const isOpenedSelector = (state: AppState) => state.menu.isOpened
