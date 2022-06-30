@@ -24,3 +24,9 @@ html, body {
 #root {
   height: 100%;
 }
+
+:root {
+  --white: #f7dcb5;
+  --blue-100: #283abf;
+  --blue-200: #4285f4;
+}

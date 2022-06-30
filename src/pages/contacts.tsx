@@ -3,7 +3,7 @@ import { Container } from "../components/Container/Container"
 import { Contact } from "../components/Contact/Contact"
 import styles from './../styles/pages/Contacts.module.css'
 
-export default function About() {
+export default function Contacts() {
   return (
     <Layout>
       <div className={styles.Contacts}>

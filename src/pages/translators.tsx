@@ -4,7 +4,7 @@ import { TextBlock } from "../components/TextBlock/TextBlock"
 import { Button } from "../components/Button/Button"
 import styles from './../styles/pages/Translators.module.css'
 
-export default function About() {
+export default function Translators() {
   return (
     <Layout>
       <div className={styles.Translators}>
