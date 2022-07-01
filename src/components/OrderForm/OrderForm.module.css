@@ -1,0 +1,72 @@
+.OrderHeadline {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blue-200);
+  margin-bottom: 20px;
+}
+
+.Description {
+  margin-bottom: 14px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.Form {
+  width: 100%;
+}
+
+.FormSection {
+  padding: 20px 0px;
+  width: 100%;
+}
+
+.Select {
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+}
+
+.Input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(111, 110, 119);
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+  background: #fff;
+}
+
+.InputInvalid {
+  border: 1px solid rgb(111, 110, 119);
+  box-shadow: 0px 0px 5px 5px rgba(255, 0, 0, 0.3);
+}
+
+.LetterTip {
+  padding: 0px 0px 10px 0px;
+}
+
+.LetterInput {
+  width: 100%;
+  min-height: 50px;
+  padding: 20px 10px;
+  font-size: 16px;
+  color: inherit;
+  font-family: inherit;
+  resize: none;
+  border: 1px solid rgb(111, 110, 119);
+  border-radius: 10px;
+}
+
+.CurrentPrice {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+.CurrentPrice span {
+  color: var(--blue-200);
+}
+
+.OrderButton {
+  font-size: 20px;
+}

@@ -21,15 +21,13 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         <link rel="manifest" href="./manifest.json" />
         <title>UMR Group | Translate</title>
       </Head>
-      <Provider store={store}>
-        <Header />
-  
-        <div className={styles.Main}>
-          {children}
-        </div>
-  
-        <Footer />
-      </Provider>
+      <Header />
+
+      <div className={styles.Main}>
+        {children}
+      </div>
+
+      <Footer />
     </>
   )
 }
