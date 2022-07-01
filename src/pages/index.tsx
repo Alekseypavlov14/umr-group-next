@@ -1,14 +1,12 @@
 import { TextBlock } from "../components/TextBlock/TextBlock"
 import { Section } from "../components/Section/Section"
-import Image from "next/image"
 import Link from "next/link"
-import image from './../assets/images/translator.png'
 import styles from './../styles/pages/Home.module.css'
 
 export default function Home() {
   return (
     <>
-      <Section>
+      <Section withoutImage>
         <TextBlock>
           <>Ми - <span>UMR&nbsp; Group</span></>
           <>
@@ -17,12 +15,6 @@ export default function Home() {
             громадяни України.
           </>
         </TextBlock>
-
-        <Image 
-          className={styles.Image} 
-          src={image} 
-          alt='translator' 
-        />
       </Section>
 
       <Section withoutImage>

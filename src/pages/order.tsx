@@ -39,7 +39,3 @@ export default function Order() {
     </>
   )
 }
-
-export function getServerSideProps() {
-  
-}
