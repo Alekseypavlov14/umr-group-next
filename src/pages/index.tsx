@@ -1,4 +1,3 @@
-import { Layout } from "../components/Layout/Layout"
 import { TextBlock } from "../components/TextBlock/TextBlock"
 import { Section } from "../components/Section/Section"
 import Image from "next/image"
@@ -8,7 +7,7 @@ import styles from './../styles/pages/Home.module.css'
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       <Section>
         <TextBlock>
           <>Ми - <span>UMR&nbsp; Group</span></>
@@ -42,6 +41,6 @@ export default function Home() {
           </Link>
         </div>
       </Section>
-    </Layout>
+    </>
   )
 }

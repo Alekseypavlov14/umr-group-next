@@ -1,12 +1,10 @@
-import { Layout } from "../components/Layout/Layout"
 import { Container } from "../components/Container/Container"
 import { Contact } from "../components/Contact/Contact"
 import styles from './../styles/pages/Contacts.module.css'
 
 export default function Contacts() {
   return (
-    <Layout>
-      <div className={styles.Contacts}>
+    <div className={styles.Contacts}>
       <Container>
         <div className={styles.Contacts__List}>
           <Contact
@@ -29,6 +27,5 @@ export default function Contacts() {
         </div>
       </Container>
     </div>
-    </Layout>
   )
 }

@@ -1,12 +1,11 @@
 import { Container } from "../components/Container/Container"
-import { Layout } from "../components/Layout/Layout"
 import { TextBlock } from "../components/TextBlock/TextBlock"
 import { Button } from "../components/Button/Button"
 import styles from './../styles/pages/Translators.module.css'
 
 export default function Translators() {
   return (
-    <Layout>
+    <>
       <div className={styles.Translators}>
         <Container>
           <div className={styles.TranslatorsContent}>
@@ -36,6 +35,6 @@ export default function Translators() {
           </div>
         </Container>
       </div>
-    </Layout>
+    </>
   )
 }

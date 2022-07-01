@@ -1,12 +1,11 @@
-import { Layout } from "../components/Layout/Layout"
 import { TextBlock } from "../components/TextBlock/TextBlock"
 import { Container } from "../components/Container/Container"
-import styles from './../styles/pages/Order.module.css'
 import { OrderForm } from "../components/OrderForm/OrderForm"
+import styles from './../styles/pages/Order.module.css'
 
 export default function Order() {
   return (
-    <Layout>
+    <>
       <div className={styles.Order}>
         <Container>
           <div className={styles.TextContent}>
@@ -37,7 +36,7 @@ export default function Order() {
           </Container>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }
 

@@ -1,12 +1,9 @@
 import { FC, ChangeEvent } from 'react'
+import { Additive } from '../../types/Additive.type'
 import styles from './AdditiveInput.module.css'
 
 interface AdditiveInputProps {
-  additive: {
-    name: string,
-    label: string,
-    price: number
-  }
+  additive: Additive
   onChange: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
