@@ -12,6 +12,10 @@ const FeedbackPanel: FC<FeedbackPanelProps> = () => {
   function createFeedback(e: MouseEvent<HTMLAnchorElement>) {
     e.preventDefault()
 
+    if (author.length === 0 || content.length < 20) {
+      return // TODO: add UI invalid inputs
+    }
+
     APIRequest('/feedback', {
       method: 'POST',
       body: {
