@@ -45,6 +45,13 @@ const Footer: FC<FooterProps> = () => {
               </Link>
             </div>
             <div className={styles.Footer__Row}>
+              <Link href='/feedbacks'>
+                <a className={styles.Footer__Row__Link}>
+                  Відгуки
+                </a>
+              </Link>
+            </div>
+            <div className={styles.Footer__Row}>
               <Link href='/contacts'>
                 <a className={styles.Footer__Row__Link}>
                 Контакти

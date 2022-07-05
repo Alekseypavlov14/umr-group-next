@@ -51,6 +51,15 @@ const Nav: FC<NavProps> = () => {
           </Link>
         </div>
         <div className={styles.Nav__item}>
+          <Link href='/feedbacks'>
+            <a
+              onClick={() => dispatch(close())}
+              className={styles.Nav__link}
+              children='Відгуки'
+            />
+          </Link>
+        </div>
+        <div className={styles.Nav__item}>
           <Link href='/contacts'>
             <a
               onClick={() => dispatch(close())}
