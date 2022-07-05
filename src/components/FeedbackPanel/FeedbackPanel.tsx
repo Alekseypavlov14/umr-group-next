@@ -21,6 +21,9 @@ const FeedbackPanel: FC<FeedbackPanelProps> = () => {
         }
       }
     })
+
+    setAuthor('')
+    setContent('')
   }
 
   return (
