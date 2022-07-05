@@ -4,6 +4,10 @@
   background-color: #FAFBFD;
 }
 
+.FeedbackContainer {
+  padding-top: 20px;
+}
+
 .FeedbackContainer > div {
   margin-bottom: 20px;
 }

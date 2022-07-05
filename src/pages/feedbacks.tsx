@@ -8,15 +8,15 @@ import styles from './../styles/pages/Feedbacks.module.css'
 export default function Feedbacks({ feedbacks }) {
   return (
     <div className={styles.Feedbacks}>
+      <FeedbackPanel /> 
+      
       <Container>
         <div className={styles.FeedbackContainer}>
           {feedbacks.map((feedback, index) => (
             <Feedback feedback={feedback} key={index} />
           ))}
         </div>
-      </Container>     
-
-      <FeedbackPanel /> 
+      </Container>
     </div>
   )
 }

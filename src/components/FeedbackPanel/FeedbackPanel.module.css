@@ -12,12 +12,14 @@
   width: 100%;
   align-items: flex-start;
   gap: 10px;
+  font-size: 16px;
 }
 
 .Input {
   display: block;
   flex: 1 0 auto;
   margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .Textarea {
@@ -25,6 +27,7 @@
   width: 100%;
   min-height: 60px;
   resize: none;
+  font-size: 16px;
 }
 
 .Input, .Textarea {
