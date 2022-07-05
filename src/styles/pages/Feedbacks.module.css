@@ -1,0 +1,9 @@
+.Feedbacks {
+  padding: 20px 0px;
+  width: 100%;
+  background-color: #FAFBFD;
+}
+
+.FeedbackContainer > div {
+  margin-bottom: 20px;
+}
