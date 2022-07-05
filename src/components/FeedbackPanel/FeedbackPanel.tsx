@@ -1,6 +1,7 @@
 import { FC, useState, MouseEvent } from 'react'
 import { APIRequest } from '../../business/APIRequest/APIRequest'
 import { Button } from '../Button/Button'
+import { Container } from '../Container/Container'
 import styles from './FeedbackPanel.module.css'
 
 interface FeedbackPanelProps {}
@@ -32,29 +33,31 @@ const FeedbackPanel: FC<FeedbackPanelProps> = () => {
 
   return (
     <div className={styles.FeedbackPanel}>
-      <div className={styles.PanelHeader}>
-        <input 
-          onChange={e => setAuthor(e.target.value)}
-          placeholder="Ваше ім'я або пошта"
-          className={styles.Input}
-          value={author}
-          type='text'
+      <Container>
+        <div className={styles.PanelHeader}>
+          <input 
+            onChange={e => setAuthor(e.target.value)}
+            placeholder="Ваше ім'я або пошта"
+            className={styles.Input}
+            value={author}
+            type='text'
+          />
+  
+          <Button
+            onClick={createFeedback}
+            href='/'
+          >
+            Відправити
+          </Button>
+        </div>
+  
+        <textarea 
+          onChange={(e) => setContent(e.target.value)}
+          className={styles.Textarea}
+          placeholder='Відгук'
+          value={content}
         />
-
-        <Button
-          onClick={createFeedback}
-          href='/'
-        >
-          Відправити
-        </Button>
-      </div>
-
-      <textarea 
-        onChange={(e) => setContent(e.target.value)}
-        className={styles.Textarea}
-        placeholder='Відгук'
-        value={content}
-      />
+      </Container>
     </div>
   )
 }
