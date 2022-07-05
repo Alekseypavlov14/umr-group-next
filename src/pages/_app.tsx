@@ -12,10 +12,15 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <Provider store={store}>
       <Head>
         <meta charSet="utf-8" />
-        <link rel="icon" href="./logo.png" />
+        <link rel="icon" href="/logo.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="apple-touch-icon" href="./logo.png" />
-        <link rel="manifest" href="./manifest.json" />
+        <link rel="apple-touch-icon" href="/logo.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#000000" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
         <title>UMR Group | Translate</title>
       </Head>
 
