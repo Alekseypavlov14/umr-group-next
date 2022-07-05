@@ -1,0 +1,36 @@
+.FeedbackPanel {
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  padding: 20px;
+}
+
+.PanelHeader {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.Input {
+  display: block;
+  flex: 1 0 auto;
+  margin-bottom: 10px;
+}
+
+.Textarea {
+  display: block;
+  width: 100%;
+  min-height: 60px;
+  resize: none;
+}
+
+.Input, .Textarea {
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 1em;
+}
