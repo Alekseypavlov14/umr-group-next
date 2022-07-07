@@ -9,7 +9,7 @@ interface Option {
 
 interface SelectProps {
   options: Option[]
-  value?: Option
+  value: Option
   onChange: (e: Option) => void
 }
 
@@ -20,7 +20,7 @@ const Select: FC<SelectProps> = ({
 }) => {
   return (
     <ReactSelect
-      value={value || options[0]}
+      value={value}
       options={options}
       instanceId={'option'}
       defaultValue={options[0]}

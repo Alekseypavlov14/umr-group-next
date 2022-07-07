@@ -96,6 +96,7 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
           </div>
           <Select
             options={orders.map(convertOrderToOption)}
+            value={convertOrderToOption(order)}
             onChange={(e) => {
               if (!e) return
               dispatch(changeOrder(getOrderByName(e.value)))
