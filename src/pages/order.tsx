@@ -3,9 +3,10 @@ import { Container } from "../components/Container/Container"
 import { OrderForm } from "../components/OrderForm/OrderForm"
 import { APIRequest } from "../business/APIRequest/APIRequest"
 import { Service } from "../types/Service.type"
+import type { Order } from "../types/Order.type"
 import styles from './../styles/pages/Order.module.css'
 
-export default function Order({ services }) {
+export default function Order({ orders }) {
   return (
     <>
       <div className={styles.Order}>
@@ -34,7 +35,7 @@ export default function Order({ services }) {
         </Container>
         <div className={styles.OrderContent}>
           <Container>
-            <OrderForm services={services} />
+            <OrderForm orders={orders} />
           </Container>
         </div>
       </div>
@@ -44,10 +45,25 @@ export default function Order({ services }) {
 
 export async function getServerSideProps() {
   const data = await APIRequest('/services')
+  const services: Service[] = data.services
+
+  const orders = services.map<Order>(service => ({
+    name: service.name,
+    label: service.label,
+    startPrice: service.startPrice,
+    additives: service.additives.map(additive => ({
+      name: additive.name,
+      label: additive.label,
+      price: additive.price,
+      isChecked: false
+    })),
+    date: Date.now(),
+    hour: 0
+  }))
   
   return {
     props: {
-      services: data.services as Service[]
+      orders: orders
     }
   }
 }
