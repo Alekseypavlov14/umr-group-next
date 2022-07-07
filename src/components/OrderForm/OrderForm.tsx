@@ -43,6 +43,16 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
 
     return `${now.getFullYear()}-${month}-${day}`
   }
+
+  function uncheckAdditives() {
+    const additiveInputs = additives.map(additive => {
+      return document.getElementById(additive.name) as HTMLInputElement
+    })
+
+    additiveInputs.forEach(additiveInput => {
+      additiveInput.checked = false
+    })
+  }
   
   return (
     <div className={styles.OrderForm}>
@@ -59,6 +69,7 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
             onChange={(e) => {
               if (!e) return
               dispatch(changeOrder(getOrderByName(e.value)))
+              uncheckAdditives()
             }} 
           />
         </div>
