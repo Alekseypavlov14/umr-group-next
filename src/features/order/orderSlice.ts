@@ -1,29 +1,28 @@
 import { Service } from './../../types/Service.type'
 import { AppState } from './../../app/store'
 import { createSlice } from '@reduxjs/toolkit'
-
-interface Additive {
-  name: string,
-  price: number,
-  isChecked: boolean
-}
+import { OrderAdditive } from './../../types/OrderAdditive.type'
 
 interface initialStateInterface {
+  name: string
+  label: string
   startPrice: number
-  additives: Additive[]
+  additives: OrderAdditive[]
   date: number,
   hour: number
 }
 
-type Action<T> = {
-  payload: T
-}
-
 const initialState: initialStateInterface = {
+  name: '',
+  label: '',
   startPrice: 0,
   additives: [],
   date: 0,
   hour: 0
+}
+
+type Action<T> = {
+  payload: T
 }
 
 const orderSlice = createSlice({
@@ -31,17 +30,20 @@ const orderSlice = createSlice({
   initialState,
   reducers: {
     changeService(state: initialStateInterface, action: Action<Service>) {
+      state.name = action.payload.name
+      state.label = action.payload.label
       state.startPrice = action.payload.startPrice
       state.additives = action.payload.additives.map(additive => ({
         name: additive.name,
+        label: additive.label,
         price: additive.price,
         isChecked: false
       }))
       state.date = Date.now()
       state.hour = 0
     },
-    updateAdditive(state, action: Action<Additive>) {
-      let additive = state.additives.find(additive => {
+    updateAdditive(state, action: Action<OrderAdditive>) {
+      let additive: OrderAdditive = state.additives.find(additive => {
         return additive.name === action.payload.name
       })
       
