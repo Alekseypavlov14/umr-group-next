@@ -144,11 +144,17 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
           <div className={styles.Description}>
             Оберіть час:
           </div>
-          <Select
-            options={timeOptions()}
-            value={createHourOption(order.hour)}
-            onChange={(e) => dispatch(updateHour(Number(e.value)))}
-          />
+          <select
+            onChange={(e) => dispatch(updateHour(Number(e.target.value)))}
+            className={styles.Input}
+            inputMode='none'
+          >
+            {timeOptions().map(option => (
+              <option value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div className={styles.FormSection}>
