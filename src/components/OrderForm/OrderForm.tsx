@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { Button } from '../Button/Button'
 import { AdditiveInput } from '../AdditiveInput/AdditiveInput'
 import { useDispatch, useSelector } from 'react-redux'
@@ -21,15 +21,13 @@ interface OrderFormProps {
 
 const OrderForm: FC<OrderFormProps> = ({ orders }) => {
   const dispatch = useDispatch()
+  const order = useSelector(orderSelector)
+  const additives = useSelector(additivesSelector)
+  const [letter, setLetter] = useState('')
 
   useEffect(() => {
     dispatch(changeOrder(orders[0]))
   }, [])
-
-  const order = useSelector(orderSelector)
-  const additives = useSelector(additivesSelector)
-
-  console.log(order)
 
   const convertOrderToOption = (order: Order) => ({
     label: order.label,
@@ -74,6 +72,16 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
       label: `${labelTemplate}:00`,
       value: labelTemplate
     })
+  }
+
+  const addInvalid = (id: string) => {
+    document.getElementById('letter')
+    .classList.add(styles.InputInvalid)
+  }
+
+  const removeInvalid = (id: string) => {
+    document.getElementById('letter')
+    .classList.remove(styles.InputInvalid)
   }
   
   return (
@@ -124,7 +132,6 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
             onChange={(e) => {
               dispatch(updateDate(new Date(e.target.value).getTime()))
             }}
-            onFocus={(e) => {}}
             min={getInputDateFormatted(Date.now())}
             value={getInputDateFormatted(order.date)}
             id='date'
@@ -156,8 +163,9 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
             minLength={30}
             maxLength={500}
             className={styles.Input}
-            onChange={(e) => {}}
-            onFocus={(e) => {}}
+            value={letter}
+            onChange={(e) => setLetter(e.target.value)}
+            onFocus={() => removeInvalid('letter')}
           />
         </div>
 
@@ -170,6 +178,9 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
               href=''
               onClick={(e) => {
                 e.preventDefault()
+                if (letter.length > 500 || letter.length < 30) {
+                  addInvalid('letter')
+                }
               }}
             >
               Замовити
