@@ -19,6 +19,7 @@ const Select: FC<SelectProps> = ({
   return (
     <ReactSelect
       options={options}
+      instanceId={'option'}
       defaultValue={options[0]}
       className={styles.Select}
       onChange={onChange}

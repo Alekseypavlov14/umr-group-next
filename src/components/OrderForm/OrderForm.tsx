@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Order } from '../../types/Order.type'
 import { OrderAdditive } from '../../types/OrderAdditive.type'
 import { countPrice } from '../../business/countOrderPrice/CountPrice'
-import { changeOrder, orderSelector, updateAdditive, updateDate } from '../../features/order/orderSlice'
+import { additivesSelector, changeOrder, orderSelector, updateAdditive, updateDate } from '../../features/order/orderSlice'
 import { Select } from './../Select/Select'
 import styles from './OrderForm.module.css'
 
@@ -21,6 +21,7 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
   }, [])
 
   const order = useSelector(orderSelector)
+  const additives = useSelector(additivesSelector)
 
   const convertOrderToOption = (order: Order) => ({
     label: order.label,
@@ -64,7 +65,7 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
 
         <div className={styles.FormSection}>
           <div className={styles.Description}>Опції:</div>
-          {order.additives.map((additive, index) => (
+          {additives.map((additive) => (
             <AdditiveInput 
               key={additive.name}
               additive={additive}
