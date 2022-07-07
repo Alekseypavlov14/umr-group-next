@@ -1,9 +1,11 @@
 import { TextBlock } from "../components/TextBlock/TextBlock"
 import { Container } from "../components/Container/Container"
 import { OrderForm } from "../components/OrderForm/OrderForm"
+import { APIRequest } from "../business/APIRequest/APIRequest"
+import { Service } from "../types/Service.type"
 import styles from './../styles/pages/Order.module.css'
 
-export default function Order() {
+export default function Order({ services }) {
   return (
     <>
       <div className={styles.Order}>
@@ -32,10 +34,20 @@ export default function Order() {
         </Container>
         <div className={styles.OrderContent}>
           <Container>
-            <OrderForm />
+            <OrderForm services={services} />
           </Container>
         </div>
       </div>
     </>
   )
+}
+
+export async function getServerSideProps() {
+  const data = await APIRequest('/services')
+  
+  return {
+    props: {
+      services: data.services as Service[]
+    }
+  }
 }
