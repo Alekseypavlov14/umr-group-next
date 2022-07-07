@@ -3,9 +3,9 @@
   "name": "UMR Business Group",
   "icons": [
     {
-      "src": "./logo_320.jpg",
+      "src": "./logo_lite.jpg",
       "sizes": "80x80",
-      "type": "image/png"
+      "type": "image/jpg"
     }
   ],
   "start_url": ".",
