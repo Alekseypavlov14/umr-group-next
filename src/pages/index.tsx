@@ -33,6 +33,22 @@ export default function Home() {
           </Link>
         </div>
       </Section>
+
+      <Section withoutImage>
+        <div className={styles.OrderLinkContent}>
+          <TextBlock>
+            <>Як наші користувачі <span>оцінюють</span> нашу роботу?</>
+            <>
+              Прочитайте відгуки, які залишили користувачі нашого сервісу
+            </>
+          </TextBlock>
+          <Link href='/feedbacks'>
+            <a className={styles.OrderLink}>
+              Відгуки
+            </a>
+          </Link>
+        </div>
+      </Section>
     </>
   )
 }
