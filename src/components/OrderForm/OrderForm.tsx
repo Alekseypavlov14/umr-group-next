@@ -14,6 +14,7 @@ import {
 } from '../../features/order/orderSlice'
 import { Select } from './../Select/Select'
 import styles from './OrderForm.module.css'
+import { mailer } from '../../business/Mailer/Mailer'
 
 interface OrderFormProps {
   orders: Order[]
@@ -186,8 +187,9 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
               onClick={(e) => {
                 e.preventDefault()
                 if (letter.length > 500 || letter.length < 30) {
-                  addInvalid('letter')
+                  return addInvalid('letter')
                 }
+                mailer.send(letter)
               }}
             >
               Замовити
