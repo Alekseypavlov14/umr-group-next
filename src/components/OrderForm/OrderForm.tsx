@@ -76,12 +76,12 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
   }
 
   const addInvalid = (id: string) => {
-    document.getElementById('letter')
+    document.getElementById(id)
     .classList.add(styles.InputInvalid)
   }
 
   const removeInvalid = (id: string) => {
-    document.getElementById('letter')
+    document.getElementById(id)
     .classList.remove(styles.InputInvalid)
   }
   
