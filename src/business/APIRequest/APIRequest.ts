@@ -1,19 +1,16 @@
 type Options = {
-  method: string,
-  body: any
+  method?: string,
+  body?: any
 }
 
-export async function APIRequest(relativePath: string, options: Options) {
+export async function APIRequest(relativePath: string, options?: Options) {
   const path = 'https://umr-group.herokuapp.com' + relativePath
 
-  console.log(path)
+  const initRequest: Options = { ...options }
 
   const response = await fetch(path, {
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    method: options.method,
-    body: JSON.stringify(options.body)
+    headers: { 'Content-Type': 'application/json' },
+    ...initRequest
   })
 
   const data = await response.json()
