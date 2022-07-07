@@ -9,15 +9,18 @@ interface Option {
 
 interface SelectProps {
   options: Option[]
+  value?: Option
   onChange: (e: Option) => void
 }
 
 const Select: FC<SelectProps> = ({
   options,
+  value,
   onChange
 }) => {
   return (
     <ReactSelect
+      value={value || options[0]}
       options={options}
       instanceId={'option'}
       defaultValue={options[0]}

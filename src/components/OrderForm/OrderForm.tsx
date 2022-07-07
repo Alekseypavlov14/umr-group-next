@@ -1,11 +1,17 @@
-import { FC, useEffect, useState } from 'react'
+import { FC, useEffect } from 'react'
 import { Button } from '../Button/Button'
 import { AdditiveInput } from '../AdditiveInput/AdditiveInput'
 import { useDispatch, useSelector } from 'react-redux'
 import { Order } from '../../types/Order.type'
-import { OrderAdditive } from '../../types/OrderAdditive.type'
 import { countPrice } from '../../business/countOrderPrice/CountPrice'
-import { additivesSelector, changeOrder, orderSelector, updateAdditive, updateDate } from '../../features/order/orderSlice'
+import { 
+  additivesSelector, 
+  changeOrder, 
+  orderSelector, 
+  updateAdditive, 
+  updateDate, 
+  updateHour 
+} from '../../features/order/orderSlice'
 import { Select } from './../Select/Select'
 import styles from './OrderForm.module.css'
 
@@ -22,6 +28,8 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
 
   const order = useSelector(orderSelector)
   const additives = useSelector(additivesSelector)
+
+  console.log(order)
 
   const convertOrderToOption = (order: Order) => ({
     label: order.label,
@@ -53,6 +61,20 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
       additiveInput.checked = false
     })
   }
+
+  function timeOptions() {
+    return Array.from(new Array<Number>(24))
+      .map((number, index) => index)
+      .map(option => createHourOption(option))
+  }
+
+  function createHourOption(hour: number) {
+    const labelTemplate = hour < 10 ? `0${hour}` : String(hour)
+    return ({
+      label: `${labelTemplate}:00`,
+      value: labelTemplate
+    })
+  }
   
   return (
     <div className={styles.OrderForm}>
@@ -70,6 +92,7 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
               if (!e) return
               dispatch(changeOrder(getOrderByName(e.value)))
               uncheckAdditives()
+              dispatch(updateHour(0))
             }} 
           />
         </div>
@@ -106,6 +129,17 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
             value={getInputDateFormatted(order.date)}
             id='date'
             type='date'
+          />
+        </div>
+
+        <div className={styles.FormSection}>
+          <div className={styles.Description}>
+            Оберіть час:
+          </div>
+          <Select
+            options={timeOptions()}
+            value={createHourOption(order.hour)}
+            onChange={(e) => dispatch(updateHour(Number(e.value)))}
           />
         </div>
 
