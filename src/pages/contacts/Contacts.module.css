@@ -4,7 +4,7 @@
   background-color: #FAFBFD;
 }
 
-.Contacts__List {
+.ContactsList {
   width: 100%;
   display: flex;
   justify-content: space-between;

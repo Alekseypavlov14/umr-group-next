@@ -6,7 +6,7 @@ export default function Contacts() {
   return (
     <div className={styles.Contacts}>
       <Container>
-        <div className={styles.Contacts__List}>
+        <div className={styles.ContactsList}>
           <Contact
             socialMedia='Telegram'
             link='https://telegram.me/+380508801537'
