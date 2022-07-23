@@ -1,5 +1,5 @@
-import { Section } from "../components/Section/Section"
-import { TextBlock } from "../components/TextBlock/TextBlock"
+import { Section } from "../../components/Section/Section"
+import { TextBlock } from "../../components/TextBlock/TextBlock"
 
 export default function About() {
   return (

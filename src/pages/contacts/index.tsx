@@ -1,6 +1,6 @@
-import { Container } from "../components/Container/Container"
-import { Contact } from "../components/Contact/Contact"
-import styles from './../styles/pages/Contacts.module.css'
+import { Container } from "../../components/Container/Container"
+import { Contact } from "../../components/Contact/Contact"
+import styles from './Contacts.module.css'
 
 export default function Contacts() {
   return (

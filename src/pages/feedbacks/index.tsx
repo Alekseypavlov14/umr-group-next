@@ -1,9 +1,8 @@
-import { Button } from '../components/Button/Button'
-import { Container } from '../components/Container/Container'
-import { Feedback } from '../components/Feedback/Feedback'
-import { FeedbackPanel } from '../components/FeedbackPanel/FeedbackPanel'
-import { FeedbackType } from '../types/Feedback.type'
-import styles from './../styles/pages/Feedbacks.module.css'
+import { Container } from '../../components/Container/Container'
+import { Feedback } from '../../components/Feedback/Feedback'
+import { FeedbackPanel } from '../../components/FeedbackPanel/FeedbackPanel'
+import { FeedbackType } from '../../types/Feedback.type'
+import styles from './Feedbacks.module.css'
 
 export default function Feedbacks({ feedbacks }) {
   return (

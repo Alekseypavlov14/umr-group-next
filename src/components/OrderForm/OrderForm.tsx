@@ -13,8 +13,8 @@ import {
   updateHour 
 } from '../../features/order/orderSlice'
 import { Select } from './../Select/Select'
-import styles from './OrderForm.module.css'
 import { mailer } from '../../business/Mailer/Mailer'
+import styles from './OrderForm.module.css'
 
 interface OrderFormProps {
   orders: Order[]
@@ -109,9 +109,9 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
 
         <div className={styles.FormSection}>
           <div className={styles.Description}>Опції:</div>
-          {additives.map((additive) => (
+          {additives.map((additive, index) => (
             <AdditiveInput 
-              key={additive.name}
+              key={index}
               additive={additive}
               onChange={(e) => {
                 dispatch(updateAdditive({
@@ -150,8 +150,11 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
             className={styles.Input}
             inputMode='none'
           >
-            {timeOptions().map(option => (
-              <option value={option.value}>
+            {timeOptions().map((option, index) => (
+              <option 
+                value={option.value} 
+                key={index}
+              >
                 {option.label}
               </option>
             ))}
