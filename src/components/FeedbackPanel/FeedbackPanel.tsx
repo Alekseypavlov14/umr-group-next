@@ -1,7 +1,7 @@
 import { FC, useState, MouseEvent } from 'react'
-import { APIRequest } from '../../business/APIRequest/APIRequest'
-import { Button } from '../Button/Button'
+import { APIRequest } from '../../utils/APIRequest/APIRequest'
 import { Container } from '../Container/Container'
+import { Button } from '../Button/Button'
 import styles from './FeedbackPanel.module.css'
 
 interface FeedbackPanelProps {}

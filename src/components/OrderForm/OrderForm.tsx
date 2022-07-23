@@ -3,7 +3,7 @@ import { Button } from '../Button/Button'
 import { AdditiveInput } from '../AdditiveInput/AdditiveInput'
 import { useDispatch, useSelector } from 'react-redux'
 import { Order } from '../../types/Order.type'
-import { countPrice } from '../../business/countOrderPrice/CountPrice'
+import { countPrice } from '../../utils/countOrderPrice/CountPrice'
 import { 
   additivesSelector, 
   changeOrder, 
@@ -13,7 +13,7 @@ import {
   updateHour 
 } from '../../features/order/orderSlice'
 import { Select } from './../Select/Select'
-import { mailer } from '../../business/Mailer/Mailer'
+import { mailer } from '../../utils/Mailer/Mailer'
 import styles from './OrderForm.module.css'
 
 interface OrderFormProps {

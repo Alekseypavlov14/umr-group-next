@@ -1,7 +1,7 @@
 import { TextBlock } from "../../components/TextBlock/TextBlock"
 import { Container } from "../../components/Container/Container"
 import { OrderForm } from "../../components/OrderForm/OrderForm"
-import { APIRequest } from "../../business/APIRequest/APIRequest"
+import { APIRequest } from "../../utils/APIRequest/APIRequest"
 import { Service } from "../../types/Service.type"
 import type { Order } from "../../types/Order.type"
 import styles from './Order.module.css'
