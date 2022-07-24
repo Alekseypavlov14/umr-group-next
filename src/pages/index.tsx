@@ -1,34 +1,31 @@
+import { langSelector } from "../features/lang/languageSlice"
 import { TextBlock } from "../components/TextBlock/TextBlock"
 import { Section } from "../components/Section/Section"
+import { useSelector } from "react-redux"
 import Link from "next/link"
 import styles from './index.module.css'
 
 export default function Home() {
+  const HomePage = useSelector(langSelector).page.main
+
   return (
     <>
       <Section withoutImage>
         <TextBlock>
-          <>Ми - <span>UMR&nbsp; Group</span></>
-          <>
-            Ми допомагаємо Вам знаходити перекладачів з російської на 
-            румунську мову. Наші спеціалісти вирішують проблеми, з якими зустрічаються 
-            громадяни України.
-          </>
+          <>{HomePage.sections[0].title}</>
+          <>{HomePage.sections[0].content}</>
         </TextBlock>
       </Section>
 
       <Section withoutImage>
         <div className={styles.OrderLinkContent}>
           <TextBlock>
-            <>Які питання ми можемо допомогти вирішити?</>
-            <>
-              Наша команда пропонує два вида послуг перекладача: 
-              по телефону та на місці.
-            </>
+            <>{HomePage.sections[1].title}</>
+            <>{HomePage.sections[1].content}</>
           </TextBlock>
           <Link href='/order'>
             <a className={styles.OrderLink}>
-              Замовити
+              {HomePage.sections[1].button}
             </a>
           </Link>
         </div>
@@ -37,14 +34,12 @@ export default function Home() {
       <Section withoutImage>
         <div className={styles.OrderLinkContent}>
           <TextBlock>
-            <>Як наші користувачі <span>оцінюють</span> нашу роботу?</>
-            <>
-              Прочитайте відгуки, які залишили користувачі нашого сервісу
-            </>
+            <>{HomePage.sections[2].title}</>
+            <>{HomePage.sections[2].content}</>
           </TextBlock>
           <Link href='/feedbacks'>
             <a className={styles.OrderLink}>
-              Відгуки
+              {HomePage.sections[2].button}
             </a>
           </Link>
         </div>

@@ -3,14 +3,14 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { Content } from "../../types/Content"
 import content from './../../data/content.json'
 
-const initialState: Content = content.ua
+const initialState: Content = content.en
 
 const langSlice = createSlice({
   name: 'lang',
   initialState,
   reducers: {
-    translate(state, action: PayloadAction<Content>) {
-      state = action.payload
+    translate(state, action: PayloadAction<string>) {
+      state = content[action.payload]
     }
   }
 })

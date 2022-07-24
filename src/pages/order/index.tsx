@@ -4,33 +4,27 @@ import { Container } from "../../components/Container/Container"
 import { APIRequest } from "../../utils/APIRequest/APIRequest"
 import { Service } from "../../types/Service.type"
 import type { Order } from "../../types/Order.type"
+import { useSelector } from 'react-redux'
+import { langSelector } from '../../features/lang/languageSlice'
 import styles from './Order.module.css'
 
 const OrderForm = lazy(() => import('../../components/OrderForm/OrderForm'))
 
 export default function Order({ orders }) {
+  const OrderPage = useSelector(langSelector).page.order
+
   return (
     <div className={styles.Order}>
       <Container>
         <div className={styles.TextContent}>
           <TextBlock>
-            <>Як це працює?</>
-            <>
-              Ви замовляєте перекладача. Коли ми його знаходимо, Ви 
-              сплачуєте його роботу, відправляючи гроші до нас. Якщо перекладач роботу виконав,
-              він отримає оплату, а інакше ми повертаємо її Вам. Це гарантує якість роботи
-              перекладача
-            </>
+            <>{OrderPage.textBlocks[0].title}</>
+            <>{OrderPage.textBlocks[0].content}</>
           </TextBlock>
 
           <TextBlock>
-            <>Як ми рахуємо <span>вартість</span>?</>
-            <>
-              Для кожного виду послуг є початкова вартість за годину роботи перекладача.
-              Вартість є більшою, якщо Вам потрібен робітник на найближчі 2 дні, адже знайти
-              перекладача буде важче. Також ціна є більшою, якщо Вам потрібен перекладач поза містом.
-              Якщо Ви можете підвезти робітника до необхідного місця, вартість замовлення буде нижче
-            </>
+            <>{OrderPage.textBlocks[1].title}</>
+            <>{OrderPage.textBlocks[1].content}</>
           </TextBlock>
         </div>
       </Container>

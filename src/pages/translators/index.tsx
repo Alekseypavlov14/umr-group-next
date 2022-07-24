@@ -1,35 +1,31 @@
 import { Container } from "../../components/Container/Container"
 import { TextBlock } from "../../components/TextBlock/TextBlock"
 import { Button } from "../../components/Button/Button"
+import { useSelector } from "react-redux"
+import { langSelector } from "../../features/lang/languageSlice"
 import styles from './Translators.module.css'
 
 export default function Translators() {
+  const TranslatorsPage = useSelector(langSelector).page.translators
+
   return (
     <div className={styles.Translators}>
       <Container>
         <div className={styles.TranslatorsContent}>
           <TextBlock>
-            <><span>Join</span> our team!</>
-            <>
-              We are working with ukrainians and help them
-              to find translators in Internet. To join our team, click the button below
-              and write to our friend, Andrey
-            </>
+            <>{TranslatorsPage.textBlocks[0].title}</>
+            <>{TranslatorsPage.textBlocks[0].content}</>
           </TextBlock>
 
           <TextBlock>
-            <><span>Why</span> should you join us?</>
-            <>
-              We are taking a lot of orders you will be able to get salary often.
-              Also, it is nice way to help ukrainians in this difficult moment.
-            </>
+            <>{TranslatorsPage.textBlocks[1].title}</>
+            <>{TranslatorsPage.textBlocks[1].content}</>
           </TextBlock>
 
           <div className={styles.ButtonBlock}>
-            <Button
-              href='mailto:umr.translate.group@gmail.com?subject=Translator'
-              children='Join'
-            />
+            <Button href='mailto:umr.translate.group@gmail.com?subject=Translator'>
+              {TranslatorsPage.button}
+            </Button>
           </div>
         </div>
       </Container>
