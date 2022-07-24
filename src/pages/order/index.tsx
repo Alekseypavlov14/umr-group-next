@@ -33,13 +33,15 @@ export default function Order({ orders }) {
             </>
           </TextBlock>
         </div>
+      </Container>
 
-        <div className={styles.OrderContent}>
+      <div className={styles.OrderContent}>
+        <Container>
           <Suspense fallback={<>loading...</>}>
             <OrderForm orders={orders} />
           </Suspense>
-        </div>
-      </Container>
+        </Container>
+      </div>
     </div>
   )
 }
