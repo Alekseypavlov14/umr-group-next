@@ -1,9 +1,9 @@
 import { FC, useEffect, useState } from 'react'
-import { Button } from '../Button/Button'
+import { countPrice } from '../../utils/CountOrderPrice/CountPrice'
 import { AdditiveInput } from '../AdditiveInput/AdditiveInput'
 import { useDispatch, useSelector } from 'react-redux'
 import { Order } from '../../types/Order.type'
-import { countPrice } from '../../utils/countOrderPrice/CountPrice'
+import { Button } from '../Button/Button'
 import { 
   additivesSelector, 
   changeOrder, 
