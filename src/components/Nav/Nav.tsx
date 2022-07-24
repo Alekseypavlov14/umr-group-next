@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { useAppDispatch, useAppSelector } from './../../app/hooks'
 import { isOpenedSelector, close } from '../../features/menu/menuSlice'
+import { langSelector } from '../../features/lang/languageSlice'
 import Link from 'next/link'
 import cn from 'classnames'
 import styles from './Nav.module.css'
@@ -10,6 +11,7 @@ interface NavProps {}
 const Nav: FC<NavProps> = () => {
   const isOpened = useAppSelector(isOpenedSelector)
   const dispatch = useAppDispatch()
+  const links = useAppSelector(langSelector).header.links
 
   return (
     <div className={cn(styles.Nav, isOpened && styles.Opened)}>
@@ -19,7 +21,7 @@ const Nav: FC<NavProps> = () => {
             <a
               onClick={() => dispatch(close())}
               className={styles.Nav__link} 
-              children='Головна'
+              children={links[0]}
             />
           </Link>
         </div>
@@ -28,7 +30,7 @@ const Nav: FC<NavProps> = () => {
             <a
               onClick={() => dispatch(close())}
               className={styles.Nav__link}
-              children='Замовити'
+              children={links[1]}
             />
           </Link>
         </div>
@@ -37,7 +39,7 @@ const Nav: FC<NavProps> = () => {
             <a
               onClick={() => dispatch(close())}
               className={styles.Nav__link}
-              children='Перекладачі'
+              children={links[2]}
             />
           </Link>
         </div>
@@ -46,7 +48,7 @@ const Nav: FC<NavProps> = () => {
             <a
               onClick={() => dispatch(close())}
               className={styles.Nav__link}
-              children='О нас'
+              children={links[3]}
             />
           </Link>
         </div>
@@ -55,7 +57,7 @@ const Nav: FC<NavProps> = () => {
             <a
               onClick={() => dispatch(close())}
               className={styles.Nav__link}
-              children='Відгуки'
+              children={links[4]}
             />
           </Link>
         </div>
@@ -64,7 +66,7 @@ const Nav: FC<NavProps> = () => {
             <a
               onClick={() => dispatch(close())}
               className={styles.Nav__link}
-              children='Контакти'
+              children={links[5]}
             />
           </Link>
         </div>

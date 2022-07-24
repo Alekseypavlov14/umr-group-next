@@ -1,12 +1,12 @@
 import { Container } from "../../components/Container/Container"
 import { TextBlock } from "../../components/TextBlock/TextBlock"
 import { Button } from "../../components/Button/Button"
-import { useSelector } from "react-redux"
+import { useAppSelector } from "./../../app/hooks"
 import { langSelector } from "../../features/lang/languageSlice"
 import styles from './Translators.module.css'
 
 export default function Translators() {
-  const TranslatorsPage = useSelector(langSelector).page.translators
+  const TranslatorsPage = useAppSelector(langSelector).page.translators
 
   return (
     <div className={styles.Translators}>

@@ -1,12 +1,12 @@
 import { langSelector } from "../features/lang/languageSlice"
 import { TextBlock } from "../components/TextBlock/TextBlock"
 import { Section } from "../components/Section/Section"
-import { useSelector } from "react-redux"
+import { useAppSelector } from "./../app/hooks"
 import Link from "next/link"
 import styles from './index.module.css'
 
 export default function Home() {
-  const HomePage = useSelector(langSelector).page.main
+  const HomePage = useAppSelector(langSelector).page.main
 
   return (
     <>

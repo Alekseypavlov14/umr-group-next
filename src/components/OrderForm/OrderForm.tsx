@@ -1,9 +1,10 @@
 import { FC, useEffect, useState } from 'react'
 import { countPrice } from '../../utils/CountOrderPrice/CountPrice'
 import { AdditiveInput } from '../AdditiveInput/AdditiveInput'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { Order } from '../../types/Order.type'
 import { Button } from '../Button/Button'
+import { useAppSelector } from '../../app/hooks'
 import { 
   additivesSelector, 
   changeOrder, 
@@ -22,8 +23,8 @@ interface OrderFormProps {
 
 const OrderForm: FC<OrderFormProps> = ({ orders }) => {
   const dispatch = useDispatch()
-  const order = useSelector(orderSelector)
-  const additives = useSelector(additivesSelector)
+  const order = useAppSelector(orderSelector)
+  const additives = useAppSelector(additivesSelector)
   const [letter, setLetter] = useState('')
 
   useEffect(() => {

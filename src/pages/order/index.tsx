@@ -4,14 +4,14 @@ import { Container } from "../../components/Container/Container"
 import { APIRequest } from "../../utils/APIRequest/APIRequest"
 import { Service } from "../../types/Service.type"
 import type { Order } from "../../types/Order.type"
-import { useSelector } from 'react-redux'
+import { useAppSelector } from './../../app/hooks'
 import { langSelector } from '../../features/lang/languageSlice'
 import styles from './Order.module.css'
 
 const OrderForm = lazy(() => import('../../components/OrderForm/OrderForm'))
 
 export default function Order({ orders }) {
-  const OrderPage = useSelector(langSelector).page.order
+  const OrderPage = useAppSelector(langSelector).page.order
 
   return (
     <div className={styles.Order}>
