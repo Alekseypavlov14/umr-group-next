@@ -1,10 +1,12 @@
+import { Suspense, lazy } from 'react'
 import { TextBlock } from "../../components/TextBlock/TextBlock"
 import { Container } from "../../components/Container/Container"
-import { OrderForm } from "../../components/OrderForm/OrderForm"
 import { APIRequest } from "../../utils/APIRequest/APIRequest"
 import { Service } from "../../types/Service.type"
 import type { Order } from "../../types/Order.type"
 import styles from './Order.module.css'
+
+const OrderForm = lazy(() => import('../../components/OrderForm/OrderForm'))
 
 export default function Order({ orders }) {
   return (
@@ -31,12 +33,13 @@ export default function Order({ orders }) {
             </>
           </TextBlock>
         </div>
+
+        <div className={styles.OrderContent}>
+          <Suspense fallback={<>loading...</>}>
+            <OrderForm orders={orders} />
+          </Suspense>
+        </div>
       </Container>
-      <div className={styles.OrderContent}>
-        <Container>
-          <OrderForm orders={orders} />
-        </Container>
-      </div>
     </div>
   )
 }

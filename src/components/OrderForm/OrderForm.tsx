@@ -204,4 +204,4 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
   )
 }
 
-export { OrderForm }
+export default OrderForm
