@@ -1,5 +1,7 @@
 import { FC, useEffect, useState } from 'react'
-import { countPrice } from './../../utils/CountOrderPrice/CountPrice'
+import { Select } from './../Select/Select'
+import { mailer } from '../../utils/Mailer/Mailer'
+import { countPrice } from '../../utils/CountPrice/CountPrice'
 import { AdditiveInput } from '../AdditiveInput/AdditiveInput'
 import { useDispatch } from 'react-redux'
 import { Order } from '../../types/Order.type'
@@ -13,8 +15,6 @@ import {
   updateDate, 
   updateHour 
 } from '../../features/order/orderSlice'
-import { Select } from './../Select/Select'
-import { mailer } from '../../utils/Mailer/Mailer'
 import styles from './OrderForm.module.css'
 
 interface OrderFormProps {
