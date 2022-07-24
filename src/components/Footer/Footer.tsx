@@ -4,12 +4,12 @@ import { Anchor } from '../Anchor/Anchor'
 import Link from 'next/link'
 import styles from './Footer.module.css'
 import { useAppSelector } from '../../app/hooks'
-import { langSelector } from '../../features/lang/languageSlice'
+import { contentSelector } from '../../features/lang/languageSlice'
 
 interface FooterProps {}
 
 const Footer: FC<FooterProps> = () => {
-  const footer = useAppSelector(langSelector).footer
+  const footer = useAppSelector(contentSelector).footer
 
   return (
     <div className={styles.Footer}>

@@ -11,4 +11,12 @@
   align-items: center;
   position: relative;
   z-index: 10;
+  gap: 10px;
+}
+
+.Buttons {
+  display: flex;
+  align-items: center;
+  flex: 0 0 100px;
+  gap: 20px;
 }

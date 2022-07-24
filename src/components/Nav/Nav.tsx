@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { useAppDispatch, useAppSelector } from './../../app/hooks'
 import { isOpenedSelector, close } from '../../features/menu/menuSlice'
-import { langSelector } from '../../features/lang/languageSlice'
+import { contentSelector } from '../../features/lang/languageSlice'
 import Link from 'next/link'
 import cn from 'classnames'
 import styles from './Nav.module.css'
@@ -11,7 +11,7 @@ interface NavProps {}
 const Nav: FC<NavProps> = () => {
   const isOpened = useAppSelector(isOpenedSelector)
   const dispatch = useAppDispatch()
-  const links = useAppSelector(langSelector).header.links
+  const links = useAppSelector(contentSelector).header.links
 
   return (
     <div className={cn(styles.Nav, isOpened && styles.Opened)}>

@@ -5,13 +5,13 @@ import { APIRequest } from "../../utils/APIRequest/APIRequest"
 import { Service } from "../../types/Service.type"
 import type { Order } from "../../types/Order.type"
 import { useAppSelector } from './../../app/hooks'
-import { langSelector } from '../../features/lang/languageSlice'
+import { contentSelector } from '../../features/lang/languageSlice'
 import styles from './Order.module.css'
 
 const OrderForm = lazy(() => import('../../components/OrderForm/OrderForm'))
 
 export default function Order({ orders }) {
-  const OrderPage = useAppSelector(langSelector).page.order
+  const OrderPage = useAppSelector(contentSelector).page.order
 
   return (
     <div className={styles.Order}>

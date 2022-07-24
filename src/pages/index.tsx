@@ -1,4 +1,4 @@
-import { langSelector } from "../features/lang/languageSlice"
+import { contentSelector } from "../features/lang/languageSlice"
 import { TextBlock } from "../components/TextBlock/TextBlock"
 import { Section } from "../components/Section/Section"
 import { useAppSelector } from "./../app/hooks"
@@ -6,7 +6,7 @@ import Link from "next/link"
 import styles from './index.module.css'
 
 export default function Home() {
-  const HomePage = useAppSelector(langSelector).page.main
+  const HomePage = useAppSelector(contentSelector).page.main
 
   return (
     <>
