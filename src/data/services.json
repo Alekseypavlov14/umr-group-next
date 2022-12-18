@@ -1,0 +1,31 @@
+[
+  {
+    "startPrice": 40,
+    "label": "Переклад (Російська-Румунська)",
+    "name": "Translate",
+    "additives": [
+      {
+        "name": "outside",
+        "label": "Поза містом",
+        "price": 15
+      },
+      {
+        "name": "transfer",
+        "label": "З трансфером перекладача",
+        "price": -10
+      }
+    ]
+  },
+  {
+    "startPrice": 50,
+    "label": "Переклад (Румунська-Англійська)",
+    "name": "translate/ro-en",
+    "additives": [
+      {
+        "name": "transfer",
+        "label": "З трансфером перекладача",
+        "price": -10
+      }
+    ]
+  }
+]

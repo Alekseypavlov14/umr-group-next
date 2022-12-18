@@ -1,11 +1,11 @@
 import { Suspense, lazy } from 'react'
 import { TextBlock } from "../../components/TextBlock/TextBlock"
 import { Container } from "../../components/Container/Container"
-import { APIRequest } from "../../utils/APIRequest/APIRequest"
 import { Service } from "../../types/Service.type"
 import type { Order } from "../../types/Order.type"
 import { useAppSelector } from './../../app/hooks'
 import { contentSelector } from '../../features/lang/languageSlice'
+import servicesData from './../../data/services.json'
 import styles from './Order.module.css'
 
 const OrderForm = lazy(() => import('../../components/OrderForm/OrderForm'))
@@ -41,8 +41,7 @@ export default function Order({ orders }) {
 }
 
 export async function getServerSideProps() {
-  const data = await APIRequest('/services')
-  const services: Service[] = data.services
+  const services: Service[] = servicesData
 
   const orders = services.map<Order>(service => ({
     name: service.name,

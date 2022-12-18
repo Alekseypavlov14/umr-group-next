@@ -2,6 +2,7 @@ import { Container } from '../../components/Container/Container'
 import { Feedback } from '../../components/Feedback/Feedback'
 import { FeedbackPanel } from '../../components/FeedbackPanel/FeedbackPanel'
 import { FeedbackType } from '../../types/Feedback.type'
+import feedbacksData from './../../data/feedbacks.json'
 import styles from './Feedbacks.module.css'
 
 export default function Feedbacks({ feedbacks }) {
@@ -21,12 +22,11 @@ export default function Feedbacks({ feedbacks }) {
 }
 
 export async function getServerSideProps() {
-  const response = await fetch('https://umr-group.herokuapp.com/feedbacks')
-  const data = await response.json()
+  const feedbacks = feedbacksData
 
   return {
     props: {
-      feedbacks: data.feedbacks as FeedbackType[]
+      feedbacks: feedbacks as FeedbackType[]
     }
   }
 }

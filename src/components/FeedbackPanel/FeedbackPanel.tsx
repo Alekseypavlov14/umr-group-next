@@ -1,5 +1,4 @@
 import { FC, useState, MouseEvent } from 'react'
-import { APIRequest } from '../../utils/APIRequest/APIRequest'
 import { Container } from '../Container/Container'
 import { Button } from '../Button/Button'
 import styles from './FeedbackPanel.module.css'
@@ -34,16 +33,6 @@ const FeedbackPanel: FC<FeedbackPanelProps> = () => {
 
       return
     }
-
-    APIRequest('/feedback', {
-      method: 'POST',
-      body: {
-        feedback: {
-          author, 
-          content 
-        }
-      }
-    })
 
     setAuthor('')
     setContent('')
