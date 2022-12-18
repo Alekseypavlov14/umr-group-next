@@ -73,7 +73,7 @@ const Footer: FC<FooterProps> = () => {
               {footer.company.contacts[0].media}: &nbsp;
               <Anchor 
                 className={styles.Footer__Row__Anchor}
-                href='https://telegram.me/+380508801537'
+                href='https://telegram.me/aleshapavlov14'
                 children={footer.company.contacts[0].content}
               />
             </div>
@@ -81,7 +81,7 @@ const Footer: FC<FooterProps> = () => {
               {footer.company.contacts[1].media}: &nbsp;
               <Anchor 
                 className={styles.Footer__Row__Anchor}
-                href='mailto:umr.translate.group@gmail.com'
+                href='mailto:aleshapavlov9@gmail.com'
                 children={footer.company.contacts[1].content}
               />
             </div>

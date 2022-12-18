@@ -9,20 +9,20 @@ export default function Contacts() {
         <div className={styles.ContactsList}>
           <Contact
             socialMedia='Telegram'
-            link='https://telegram.me/+380508801537'
-            label='Andrey Shvedov'
+            link='https://telegram.me/aleshapavlov14'
+            label='Oleksii Pavlov'
           />
 
           <Contact
             socialMedia='Google'
-            link='mailto:umr.translate.group@gmail.com'
+            link='mailto:aleshapavlov9@gmail.com'
             label='UMR Translate Group'
           />
 
           <Contact
             socialMedia='Instagram'
-            link='https://instagram.com/_andrey_shvedov_'
-            label='Andrey Shvedov'
+            link='https://instagram.com/alio.sha13'
+            label='Oleksii Pavlov'
           />
         </div>
       </Container>
