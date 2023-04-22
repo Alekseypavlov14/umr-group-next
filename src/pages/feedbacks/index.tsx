@@ -2,7 +2,7 @@ import { Container } from '@shared/components/Container/Container'
 import { Feedback } from '../../components/Feedback/Feedback'
 import { FeedbackPanel } from '../../components/FeedbackPanel/FeedbackPanel'
 import { FeedbackType } from '../../types/Feedback.type'
-import feedbacksData from './../../data/feedbacks.json'
+import feedbacksData from '@data/feedbacks.json'
 import styles from './Feedbacks.module.css'
 
 export default function Feedbacks({ feedbacks }) {
