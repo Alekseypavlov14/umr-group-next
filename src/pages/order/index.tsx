@@ -8,7 +8,7 @@ import { contentSelector } from '@features/lang/languageSlice'
 import servicesData from '@data/services.json'
 import styles from './Order.module.css'
 
-const OrderForm = lazy(() => import('../../components/OrderForm/OrderForm'))
+const OrderForm = lazy(() => import('../../widgets/OrderForm/OrderForm'))
 
 export default function Order({ orders }) {
   const OrderPage = useAppSelector(contentSelector).page.order

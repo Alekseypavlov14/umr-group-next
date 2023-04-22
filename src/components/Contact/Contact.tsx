@@ -8,7 +8,7 @@ interface ContactProps {
   label: string
 }
 
-const Contact: FC<ContactProps> = ({
+export const Contact: FC<ContactProps> = ({
   socialMedia,
   link,
   label
@@ -27,5 +27,3 @@ const Contact: FC<ContactProps> = ({
     </div>
   )
 }
-
-export { Contact }

@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
-import { Header } from '../components/Header/Header'
-import { Footer } from '../components/Footer/Footer'
+import { Header } from '@widgets/Header/Header'
+import { Footer } from '@widgets/Footer/Footer'
 import { Provider } from 'react-redux'
 import store from '@app/store'
 import Head from 'next/head'

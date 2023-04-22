@@ -4,9 +4,8 @@ import { useAppDispatch } from '@shared/hooks/useAppDispatch'
 import { langSelector, translate } from '@features/lang/languageSlice'
 import Image from 'next/image'
 import styles from './TranslateButton.module.css'
-
-import ua from './../../assets/langs/ukraine.png'
-import usa from './../../assets/langs/usa.png'
+import ua from './assets/ukraine.png'
+import usa from './assets/usa.png'
 
 interface TranslateButtonProps {}
 

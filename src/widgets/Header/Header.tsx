@@ -1,14 +1,14 @@
 import { FC } from 'react'
-import { BurgerButton } from '../BurgerButton/BurgerButton'
+import { TranslateButton } from './components/TranslateButton/TranslateButton'
+import { BurgerButton } from './components/BurgerButton/BurgerButton'
 import { Container } from '@shared/components/Container/Container'
 import { Logo } from '@shared/components/Logo/Logo'
 import { Nav } from '@shared/components/Nav/Nav'
-import { TranslateButton } from '../TranslateButton/TranslateButton'
 import styles from './Header.module.css'
 
 interface HeaderProps {}
 
-const Header: FC<HeaderProps> = () => {
+export const Header: FC<HeaderProps> = () => {
   return (
     <div className={styles.Header}>
       <Container>
@@ -24,5 +24,3 @@ const Header: FC<HeaderProps> = () => {
     </div>
   )
 }
-
-export { Header }
