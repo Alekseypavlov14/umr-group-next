@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Anchor } from '../Anchor/Anchor'
+import { Anchor } from '@shared/components/Anchor/Anchor'
 import styles from './Contact.module.css'
 
 interface ContactProps {

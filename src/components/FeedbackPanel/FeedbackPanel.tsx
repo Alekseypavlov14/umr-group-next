@@ -1,6 +1,6 @@
 import { FC, useState, MouseEvent } from 'react'
-import { Container } from '../Container/Container'
-import { Button } from '../Button/Button'
+import { Container } from '@shared/components/Container/Container'
+import { Button } from '@shared/components/Button/Button'
 import styles from './FeedbackPanel.module.css'
 
 interface FeedbackPanelProps {}

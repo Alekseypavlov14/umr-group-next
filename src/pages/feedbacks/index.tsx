@@ -1,4 +1,4 @@
-import { Container } from '../../components/Container/Container'
+import { Container } from '@shared/components/Container/Container'
 import { Feedback } from '../../components/Feedback/Feedback'
 import { FeedbackPanel } from '../../components/FeedbackPanel/FeedbackPanel'
 import { FeedbackType } from '../../types/Feedback.type'

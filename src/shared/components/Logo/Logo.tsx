@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import logo from './../../assets/logo.png'
+import logo from './../../../assets/logo.png'
 import Image from 'next/image'
 import styles from './Logo.module.css'
 

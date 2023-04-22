@@ -1,10 +1,10 @@
 import { FC } from 'react'
-import { Container } from '../Container/Container'
-import { Anchor } from '../Anchor/Anchor'
+import { contentSelector } from '@features/lang/languageSlice'
+import { useAppSelector } from '@app/hooks'
+import { Container } from '@shared/components/Container/Container'
+import { Anchor } from '@shared/components/Anchor/Anchor'
 import Link from 'next/link'
 import styles from './Footer.module.css'
-import { useAppSelector } from '../../app/hooks'
-import { contentSelector } from '../../features/lang/languageSlice'
 
 interface FooterProps {}
 

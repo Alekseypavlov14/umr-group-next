@@ -5,8 +5,8 @@ import { countPrice } from '../../utils/CountPrice/CountPrice'
 import { AdditiveInput } from '../AdditiveInput/AdditiveInput'
 import { useDispatch } from 'react-redux'
 import { Order } from '../../types/Order.type'
-import { Button } from '../Button/Button'
-import { useAppSelector } from '../../app/hooks'
+import { Button } from '@shared/components/Button/Button'
+import { useAppSelector } from '@app/hooks'
 import { 
   additivesSelector, 
   changeOrder, 
@@ -14,7 +14,7 @@ import {
   updateAdditive, 
   updateDate, 
   updateHour 
-} from '../../features/order/orderSlice'
+} from '@features/order/orderSlice'
 import styles from './OrderForm.module.css'
 
 interface OrderFormProps {

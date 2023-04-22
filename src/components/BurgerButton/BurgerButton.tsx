@@ -1,10 +1,10 @@
 import { FC } from 'react'
-import { useAppDispatch, useAppSelector } from './../../app/hooks'
+import { useAppDispatch, useAppSelector } from '@app/hooks'
 import { 
   isOpenedSelector,
   open,
   close
-} from '../../features/menu/menuSlice'
+} from '@features/menu/menuSlice'
 import cn from 'classnames'
 import styles from './BurgerButton.module.css'
 

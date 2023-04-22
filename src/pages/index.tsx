@@ -1,5 +1,5 @@
 import { contentSelector } from "../features/lang/languageSlice"
-import { TextBlock } from "../components/TextBlock/TextBlock"
+import { TextBlock } from "@shared/components/TextBlock/TextBlock"
 import { Section } from "../components/Section/Section"
 import { useAppSelector } from "./../app/hooks"
 import Link from "next/link"

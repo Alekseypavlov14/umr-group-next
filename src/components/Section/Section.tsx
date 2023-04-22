@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react'
-import { Container } from '../Container/Container'
+import { Container } from '@shared/components/Container/Container'
 import cn from 'classnames'
 import styles from './Section.module.css'
 

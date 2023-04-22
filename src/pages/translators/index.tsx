@@ -1,8 +1,8 @@
-import { Container } from "../../components/Container/Container"
-import { TextBlock } from "../../components/TextBlock/TextBlock"
-import { Button } from "../../components/Button/Button"
-import { useAppSelector } from "./../../app/hooks"
-import { contentSelector } from "../../features/lang/languageSlice"
+import { Container } from "@shared/components/Container/Container"
+import { TextBlock } from "@shared/components/TextBlock/TextBlock"
+import { Button } from "@shared/components/Button/Button"
+import { useAppSelector } from "@app/hooks"
+import { contentSelector } from "@features/lang/languageSlice"
 import styles from './Translators.module.css'
 
 export default function Translators() {
