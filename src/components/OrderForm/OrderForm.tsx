@@ -6,7 +6,7 @@ import { AdditiveInput } from '../AdditiveInput/AdditiveInput'
 import { useDispatch } from 'react-redux'
 import { Order } from '../../types/Order.type'
 import { Button } from '@shared/components/Button/Button'
-import { useAppSelector } from '@app/hooks'
+import { useAppSelector } from '@shared/hooks/useAppSelector'
 import { 
   additivesSelector, 
   changeOrder, 

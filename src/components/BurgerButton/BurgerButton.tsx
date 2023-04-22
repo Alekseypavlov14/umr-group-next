@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { useAppDispatch, useAppSelector } from '@app/hooks'
+import { useAppDispatch } from '@shared/hooks/useAppDispatch'
+import { useAppSelector } from '@shared/hooks/useAppSelector'
 import { 
   isOpenedSelector,
   open,

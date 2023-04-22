@@ -1,7 +1,7 @@
-import { contentSelector } from "../features/lang/languageSlice"
+import { contentSelector } from "@features/lang/languageSlice"
 import { TextBlock } from "@shared/components/TextBlock/TextBlock"
 import { Section } from "../components/Section/Section"
-import { useAppSelector } from "./../app/hooks"
+import { useAppSelector } from "@shared/hooks/useAppSelector"
 import Link from "next/link"
 import styles from './index.module.css'
 

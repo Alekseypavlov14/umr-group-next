@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { useAppDispatch, useAppSelector } from '@app/hooks'
+import { useAppSelector } from '@shared/hooks/useAppSelector'
+import { useAppDispatch } from '@shared/hooks/useAppDispatch'
 import { langSelector, translate } from '@features/lang/languageSlice'
 import Image from 'next/image'
 import styles from './TranslateButton.module.css'

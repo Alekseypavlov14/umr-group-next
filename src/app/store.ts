@@ -3,17 +3,13 @@ import { langReducer } from '../features/lang/languageSlice'
 import { orderReducer } from '../features/order/orderSlice'
 import { menuReducer } from './../features/menu/menuSlice'
 
-export function makeStore() {
-  return configureStore({
-    reducer: { 
-      menu: menuReducer,
-      order: orderReducer,
-      lang: langReducer
-    },
-  })
-}
-
-const store = makeStore()
+const store = configureStore({
+  reducer: { 
+    menu: menuReducer,
+    order: orderReducer,
+    lang: langReducer
+  },
+})
 
 export type AppState = ReturnType<typeof store.getState>
 

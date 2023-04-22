@@ -1,4 +1,4 @@
-import { useAppSelector } from "@app/hooks"
+import { useAppSelector } from "@shared/hooks/useAppSelector"
 import { Section } from "./../../components/Section/Section"
 import { TextBlock } from "@shared/components/TextBlock/TextBlock"
 import { contentSelector } from "@features/lang/languageSlice"

@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { contentSelector } from '@features/lang/languageSlice'
-import { useAppSelector } from '@app/hooks'
+import { useAppSelector } from '@shared/hooks/useAppSelector'
 import { Container } from '@shared/components/Container/Container'
 import { Anchor } from '@shared/components/Anchor/Anchor'
 import Link from 'next/link'
