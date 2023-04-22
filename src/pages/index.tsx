@@ -23,10 +23,11 @@ export default function Home() {
             <>{HomePage.sections[1].title}</>
             <>{HomePage.sections[1].content}</>
           </TextBlock>
-          <Link href='/order'>
-            <a className={styles.OrderLink}>
-              {HomePage.sections[1].button}
-            </a>
+          <Link 
+            className={styles.OrderLink}
+            href='/order'
+          >
+            {HomePage.sections[1].button}
           </Link>
         </div>
       </Section>
@@ -37,10 +38,11 @@ export default function Home() {
             <>{HomePage.sections[2].title}</>
             <>{HomePage.sections[2].content}</>
           </TextBlock>
-          <Link href='/feedbacks'>
-            <a className={styles.OrderLink}>
-              {HomePage.sections[2].button}
-            </a>
+          <Link 
+            className={styles.OrderLink}
+            href='/feedbacks'
+          >
+            {HomePage.sections[2].button}
           </Link>
         </div>
       </Section>

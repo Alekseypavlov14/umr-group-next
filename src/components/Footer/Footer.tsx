@@ -8,7 +8,7 @@ import { contentSelector } from '../../features/lang/languageSlice'
 
 interface FooterProps {}
 
-const Footer: FC<FooterProps> = () => {
+export const Footer: FC<FooterProps> = () => {
   const footer = useAppSelector(contentSelector).footer
 
   return (
@@ -23,45 +23,33 @@ const Footer: FC<FooterProps> = () => {
               {footer.navigation.title}
             </div>
             <div className={styles.Footer__Row}>
-              <Link href='/'>
-                <a className={styles.Footer__Row__Link}>
-                  {footer.navigation.links[0]}
-                </a>
+              <Link href='/' className={styles.Footer__Row__Link}>
+                {footer.navigation.links[0]}
               </Link>
             </div>
             <div className={styles.Footer__Row}>
-              <Link href='/order'>
-                <a className={styles.Footer__Row__Link}>
-                  {footer.navigation.links[1]}
-                </a>
+              <Link href='/order' className={styles.Footer__Row__Link}>
+                {footer.navigation.links[1]}
               </Link>
             </div>
             <div className={styles.Footer__Row}>
-              <Link href='/translators'>
-                <a className={styles.Footer__Row__Link}>
-                  {footer.navigation.links[2]}
-                </a>
+              <Link href='/translators' className={styles.Footer__Row__Link}>
+                {footer.navigation.links[2]}
               </Link>
             </div>
             <div className={styles.Footer__Row}>
-              <Link href='/about'>
-                <a className={styles.Footer__Row__Link}>
-                  {footer.navigation.links[3]}
-                </a>
+              <Link href='/about' className={styles.Footer__Row__Link}>
+                {footer.navigation.links[3]}
               </Link>
             </div>
             <div className={styles.Footer__Row}>
-              <Link href='/feedbacks'>
-                <a className={styles.Footer__Row__Link}>
-                  {footer.navigation.links[4]}
-                </a>
+              <Link href='/feedbacks' className={styles.Footer__Row__Link}>
+                {footer.navigation.links[4]}
               </Link>
             </div>
             <div className={styles.Footer__Row}>
-              <Link href='/contacts'>
-                <a className={styles.Footer__Row__Link}>
-                  {footer.navigation.links[5]}
-                </a>
+              <Link href='/contacts' className={styles.Footer__Row__Link}>
+                {footer.navigation.links[5]}
               </Link>
             </div>
           </div>
@@ -121,5 +109,3 @@ const Footer: FC<FooterProps> = () => {
     </div>
   )
 }
-
-export { Footer }

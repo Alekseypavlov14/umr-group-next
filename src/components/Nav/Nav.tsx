@@ -17,57 +17,57 @@ const Nav: FC<NavProps> = () => {
     <div className={cn(styles.Nav, isOpened && styles.Opened)}>
       <div className={styles.Nav__list}>
         <div className={styles.Nav__item}>
-          <Link href='/'>
-            <a
-              onClick={() => dispatch(close())}
-              className={styles.Nav__link} 
-              children={links[0]}
-            />
+          <Link 
+            onClick={() => dispatch(close())}
+            className={styles.Nav__link} 
+            href='/'
+          >
+            {links[0]}
           </Link>
         </div>
         <div className={styles.Nav__item}>
-          <Link href='/order'>
-            <a
-              onClick={() => dispatch(close())}
-              className={styles.Nav__link}
-              children={links[1]}
-            />
+          <Link 
+            onClick={() => dispatch(close())}
+            className={styles.Nav__link}
+            href='/order'
+          >
+            {links[1]}
           </Link>
         </div>
         <div className={styles.Nav__item}>
-          <Link href='/translators'>
-            <a
-              onClick={() => dispatch(close())}
-              className={styles.Nav__link}
-              children={links[2]}
-            />
+          <Link 
+            onClick={() => dispatch(close())}
+            className={styles.Nav__link}
+            href='/translators'
+          >
+            {links[2]}
           </Link>
         </div>
         <div className={styles.Nav__item}>
-          <Link href='/about'>
-            <a
-              onClick={() => dispatch(close())}
-              className={styles.Nav__link}
-              children={links[3]}
-            />
+          <Link 
+            onClick={() => dispatch(close())}
+            className={styles.Nav__link}
+            href='/about'
+          >
+            {links[3]}
           </Link>
         </div>
         <div className={styles.Nav__item}>
-          <Link href='/feedbacks'>
-            <a
-              onClick={() => dispatch(close())}
-              className={styles.Nav__link}
-              children={links[4]}
-            />
+          <Link 
+            onClick={() => dispatch(close())}
+            className={styles.Nav__link}
+            href='/feedbacks'
+          >
+            {links[4]}
           </Link>
         </div>
         <div className={styles.Nav__item}>
-          <Link href='/contacts'>
-            <a
-              onClick={() => dispatch(close())}
-              className={styles.Nav__link}
-              children={links[5]}
-            />
+          <Link 
+            onClick={() => dispatch(close())}
+            className={styles.Nav__link}
+            href='/contacts'
+          >
+            {links[5]}
           </Link>
         </div>
       </div>
