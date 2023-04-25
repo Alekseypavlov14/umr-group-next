@@ -21,31 +21,13 @@ export const Footer: FC<FooterProps> = () => {
             <div className={styles.Footer__Column__Title}>
               Navigation
             </div>
-            <div className={styles.Footer__Row}>
-              <Link href='/' className={styles.Footer__Row__Link}>
-                {links[0].content}
-              </Link>
-            </div>
-            <div className={styles.Footer__Row}>
-              <Link href='/order' className={styles.Footer__Row__Link}>
-                {links[1].content}
-              </Link>
-            </div>
-            <div className={styles.Footer__Row}>
-              <Link href='/translators' className={styles.Footer__Row__Link}>
-                {links[2].content}
-              </Link>
-            </div>
-            <div className={styles.Footer__Row}>
-              <Link href='/about' className={styles.Footer__Row__Link}>
-                {links[3].content}
-              </Link>
-            </div>
-            <div className={styles.Footer__Row}>
-              <Link href='/contacts' className={styles.Footer__Row__Link}>
-                {links[4].content}
-              </Link>
-            </div>
+            {links.map(link => (
+              <div className={styles.Footer__Row} key={link.to}>
+                <Link href={link.to} className={styles.Footer__Row__Link}>
+                  {link.content}
+                </Link>
+              </div>
+            ))}
           </div>
           <div className={styles.Footer__Column}>
             <div className={styles.Footer__Column__Title}>
