@@ -9,7 +9,7 @@ import styles from './Nav.module.css'
 
 interface NavProps {}
 
-const Nav: FC<NavProps> = () => {
+export const Nav: FC<NavProps> = () => {
   const isOpened = useAppSelector(isOpenedSelector)
   const dispatch = useAppDispatch()
   const links = useAppSelector(contentSelector).header.links
@@ -57,15 +57,6 @@ const Nav: FC<NavProps> = () => {
           <Link 
             onClick={() => dispatch(close())}
             className={styles.Nav__link}
-            href='/feedbacks'
-          >
-            {links[4]}
-          </Link>
-        </div>
-        <div className={styles.Nav__item}>
-          <Link 
-            onClick={() => dispatch(close())}
-            className={styles.Nav__link}
             href='/contacts'
           >
             {links[5]}
@@ -75,5 +66,3 @@ const Nav: FC<NavProps> = () => {
     </div>
   )
 }
-
-export { Nav }

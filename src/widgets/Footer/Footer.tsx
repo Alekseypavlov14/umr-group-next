@@ -43,11 +43,6 @@ export const Footer: FC<FooterProps> = () => {
               </Link>
             </div>
             <div className={styles.Footer__Row}>
-              <Link href='/feedbacks' className={styles.Footer__Row__Link}>
-                {footer.navigation.links[4]}
-              </Link>
-            </div>
-            <div className={styles.Footer__Row}>
               <Link href='/contacts' className={styles.Footer__Row__Link}>
                 {footer.navigation.links[5]}
               </Link>

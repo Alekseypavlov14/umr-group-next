@@ -21,11 +21,6 @@
             "title": "Які питання ми можемо допомогти вирішити?",
             "content": "Наша команда пропонує два вида послуг перекладача: по телефону та на місці.",
             "button": "Замовити"
-          },
-          {
-            "title": "Як наші користувачі оцінюють нашу роботу?",
-            "content": "Прочитайте відгуки, які залишили користувачі нашого сервісу",
-            "button": "Відгуки"
           }
         ]
       },
@@ -127,11 +122,6 @@
             "title": "Which problems do we help to solve?",
             "content": "There are two types of translation: offline and by the phone",
             "button": "Order"
-          },
-          {
-            "title": "How do our users rate our work?",
-            "content": "Read the feedback what our users left",
-            "button": "Feedbacks"
           }
         ]
       },

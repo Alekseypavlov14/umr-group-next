@@ -31,21 +31,6 @@ export default function Home() {
           </Link>
         </div>
       </Section>
-
-      <Section withoutImage>
-        <div className={styles.OrderLinkContent}>
-          <TextBlock>
-            <>{HomePage.sections[2].title}</>
-            <>{HomePage.sections[2].content}</>
-          </TextBlock>
-          <Link 
-            className={styles.OrderLink}
-            href='/feedbacks'
-          >
-            {HomePage.sections[2].button}
-          </Link>
-        </div>
-      </Section>
     </>
   )
 }
