@@ -12,15 +12,12 @@ export default function Translators() {
     <div className={styles.Translators}>
       <Container>
         <div className={styles.TranslatorsContent}>
-          <TextBlock>
-            <>{TranslatorsPage.textBlocks[0].title}</>
-            <>{TranslatorsPage.textBlocks[0].content}</>
-          </TextBlock>
-
-          <TextBlock>
-            <>{TranslatorsPage.textBlocks[1].title}</>
-            <>{TranslatorsPage.textBlocks[1].content}</>
-          </TextBlock>
+          {TranslatorsPage.textBlocks.map((block, index) => (
+            <TextBlock key={index}>
+              <>{block.title}</>
+              <>{block.content}</>
+            </TextBlock>
+          ))}
 
           <div className={styles.ButtonBlock}>
             <Button href='mailto:umr.translate.group@gmail.com?subject=Translator'>

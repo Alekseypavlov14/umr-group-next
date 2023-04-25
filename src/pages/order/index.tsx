@@ -16,15 +16,12 @@ export default function Order({ orders }) {
     <div className={styles.Order}>
       <Container>
         <div className={styles.TextContent}>
-          <TextBlock>
-            <>{OrderPage.textBlocks[0].title}</>
-            <>{OrderPage.textBlocks[0].content}</>
-          </TextBlock>
-
-          <TextBlock>
-            <>{OrderPage.textBlocks[1].title}</>
-            <>{OrderPage.textBlocks[1].content}</>
-          </TextBlock>
+          {OrderPage.textBlocks.map((block, index) => (
+            <TextBlock key={index}>
+              <>{block.title}</>
+              <>{block.content}</>
+            </TextBlock>
+          ))}
         </div>
       </Container>
 
