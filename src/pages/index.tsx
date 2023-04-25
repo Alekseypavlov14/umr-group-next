@@ -1,33 +1,33 @@
-import { contentSelector } from "@features/lang/languageSlice"
 import { TextBlock } from "@shared/components/TextBlock/TextBlock"
 import { Section } from "../shared/components/Section/Section"
-import { useAppSelector } from "@shared/hooks/useAppSelector"
 import Link from "next/link"
 import styles from './index.module.css'
 
 export default function Home() {
-  const HomePage = useAppSelector(contentSelector).page.main
-
   return (
     <>
       <Section withoutImage>
         <TextBlock>
-          <>{HomePage.sections[0].title}</>
-          <>{HomePage.sections[0].content}</>
+          <>We are UMR Group</>
+          <>
+            We help you to find translators from russian to romanian. Our 
+            employees solve the problems what you meet in Romania
+          </>
         </TextBlock>
       </Section>
 
       <Section withoutImage>
         <div className={styles.OrderLinkContent}>
           <TextBlock>
-            <>{HomePage.sections[1].title}</>
-            <>{HomePage.sections[1].content}</>
+            <>Which problems do we help to solve?</>
+            <>There are two types of translation: offline and by the phone</>
           </TextBlock>
+          
           <Link 
             className={styles.OrderLink}
             href='/order'
           >
-            {HomePage.sections[1].button}
+            Order
           </Link>
         </div>
       </Section>

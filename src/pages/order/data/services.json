@@ -1,29 +1,29 @@
 [
   {
     "startPrice": 40,
-    "label": "Переклад (Російська-Румунська)",
+    "label": "Translate (Russian-Romania)",
     "name": "Translate",
     "additives": [
       {
         "name": "outside",
-        "label": "Поза містом",
+        "label": "Out of city",
         "price": 15
       },
       {
         "name": "transfer",
-        "label": "З трансфером перекладача",
+        "label": "With transfer of translator",
         "price": -10
       }
     ]
   },
   {
     "startPrice": 50,
-    "label": "Переклад (Румунська-Англійська)",
+    "label": "Translate (Romanian-English)",
     "name": "translate/ro-en",
     "additives": [
       {
         "name": "transfer",
-        "label": "З трансфером перекладача",
+        "label": "With transfer of translator",
         "price": -10
       }
     ]

@@ -1,5 +1,5 @@
 export interface Content {
-  header: Header;
+  links: string[]
   page: Page;
   footer: Footer;
 }
@@ -10,11 +10,6 @@ export interface Page {
   order: Order;
   translators: Translators;
   about: About;
-}
-
-// Header
-export interface Header {
-  links: string[];
 }
 
 // Footer
@@ -45,7 +40,6 @@ export interface About {
 // Footer sections
 export interface Navigation {
   title: string;
-  links: string[];
 }
 
 export interface Contact {

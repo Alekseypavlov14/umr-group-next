@@ -89,12 +89,12 @@ export const OrderForm: FC<OrderFormProps> = ({ orders }) => {
   return (
     <div className={styles.OrderForm}>
       <div className={styles.OrderHeadline}>
-        Зробити замовлення
+        Order translation
       </div>
       <form className={styles.Form}>
         <div className={styles.FormSection}>
           <div className={styles.Description}>
-            Обрати послугу:
+            Select service:
           </div>
           <Select
             options={orders.map(convertOrderToOption)}
@@ -109,7 +109,7 @@ export const OrderForm: FC<OrderFormProps> = ({ orders }) => {
         </div>
 
         <div className={styles.FormSection}>
-          <div className={styles.Description}>Опції:</div>
+          <div className={styles.Description}>Options:</div>
           {additives.map((additive, index) => (
             <AdditiveInput 
               key={index}
@@ -128,7 +128,7 @@ export const OrderForm: FC<OrderFormProps> = ({ orders }) => {
 
         <div className={styles.FormSection}>
           <div className={styles.Description}>
-            Оберіть дату:
+            Select the date:
           </div>
           <input 
             className={styles.Input}
@@ -144,7 +144,7 @@ export const OrderForm: FC<OrderFormProps> = ({ orders }) => {
 
         <div className={styles.FormSection}>
           <div className={styles.Description}>
-            Оберіть час:
+            Select the time:
           </div>
           <select
             onChange={(e) => dispatch(updateHour(Number(e.target.value)))}
@@ -164,10 +164,10 @@ export const OrderForm: FC<OrderFormProps> = ({ orders }) => {
 
         <div className={styles.FormSection}>
           <div className={styles.Description}>
-            Опишіть потребу детальніше (30-500 символів):
+            Describe the need (30-500 symbols):
           </div>
           <div className={styles.LetterTip}>
-            * Залишіть контакти, щоб ми могли з Вами зв'язатися
+            * leave your contacts to make us possible to contact you
           </div>
           <textarea 
             id='letter'
@@ -183,7 +183,7 @@ export const OrderForm: FC<OrderFormProps> = ({ orders }) => {
 
         <div className={styles.FormSection}>
           <div className={styles.CurrentPrice}>
-            Вартість: <span>{countPrice(order)}</span> лей за годину
+            Price: <span>{countPrice(order)}</span> lei per hour
           </div>
           <div className={styles.OrderButton}>
             <Button
@@ -196,7 +196,7 @@ export const OrderForm: FC<OrderFormProps> = ({ orders }) => {
                 mailer.send(letter)
               }}
             >
-              Замовити
+              Order
             </Button>
           </div>
         </div>

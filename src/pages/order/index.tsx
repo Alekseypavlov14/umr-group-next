@@ -3,25 +3,35 @@ import { Container } from "@shared/components/Container/Container"
 import { Service } from "../../types/Service.type"
 import { OrderForm } from '@widgets/OrderForm/OrderForm' 
 import type { Order } from "../../types/Order.type"
-import { useAppSelector } from '@shared/hooks/useAppSelector'
-import { contentSelector } from '@features/lang/languageSlice'
-import servicesData from '@data/services.json'
+import servicesData from './data/services.json'
 import styles from './Order.module.css'
 
 
 export default function Order({ orders }) {
-  const OrderPage = useAppSelector(contentSelector).page.order
-
   return (
     <div className={styles.Order}>
       <Container>
         <div className={styles.TextContent}>
-          {OrderPage.textBlocks.map((block, index) => (
-            <TextBlock key={index}>
-              <>{block.title}</>
-              <>{block.content}</>
-            </TextBlock>
-          ))}
+          <TextBlock>
+            <>How does it work?</>
+            <>
+              You order a translator. When we find them, you pay for the work 
+              by sending money to us. If the employee does the work, they get 
+              the money, else we return the money to you. It will guarantee 
+              the quality of the work
+            </>
+          </TextBlock>
+
+          <TextBlock>
+            <>How do we count the price?</>
+            <>
+              For each type of work there is an especial start price per hour. 
+              The price is bigger if you need a translator for nearest two days, 
+              because it is harder to find an employee. Also, the price is higher 
+              if you need an employee out of the city. If you can to take the 
+              employee to the point, the price is less
+            </>
+          </TextBlock>
         </div>
       </Container>
 

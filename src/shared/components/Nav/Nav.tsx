@@ -1,8 +1,8 @@
 import { FC } from 'react'
+import { isOpenedSelector, close } from '@features/menu/menuSlice'
 import { useAppDispatch } from '@shared/hooks/useAppDispatch'
 import { useAppSelector } from '@shared/hooks/useAppSelector'
-import { isOpenedSelector, close } from '@features/menu/menuSlice'
-import { contentSelector } from '@features/lang/languageSlice'
+import { useRoutes } from '@app/routing'
 import Link from 'next/link'
 import cn from 'classnames'
 import styles from './Nav.module.css'
@@ -12,56 +12,25 @@ interface NavProps {}
 export const Nav: FC<NavProps> = () => {
   const isOpened = useAppSelector(isOpenedSelector)
   const dispatch = useAppDispatch()
-  const links = useAppSelector(contentSelector).header.links
+
+  const links = useRoutes()
+
+  const closeHandler = () => dispatch(close())
 
   return (
     <div className={cn(styles.Nav, isOpened && styles.Opened)}>
       <div className={styles.Nav__list}>
-        <div className={styles.Nav__item}>
-          <Link 
-            onClick={() => dispatch(close())}
-            className={styles.Nav__link} 
-            href='/'
-          >
-            {links[0]}
-          </Link>
-        </div>
-        <div className={styles.Nav__item}>
-          <Link 
-            onClick={() => dispatch(close())}
-            className={styles.Nav__link}
-            href='/order'
-          >
-            {links[1]}
-          </Link>
-        </div>
-        <div className={styles.Nav__item}>
-          <Link 
-            onClick={() => dispatch(close())}
-            className={styles.Nav__link}
-            href='/translators'
-          >
-            {links[2]}
-          </Link>
-        </div>
-        <div className={styles.Nav__item}>
-          <Link 
-            onClick={() => dispatch(close())}
-            className={styles.Nav__link}
-            href='/about'
-          >
-            {links[3]}
-          </Link>
-        </div>
-        <div className={styles.Nav__item}>
-          <Link 
-            onClick={() => dispatch(close())}
-            className={styles.Nav__link}
-            href='/contacts'
-          >
-            {links[4]}
-          </Link>
-        </div>
+        {links.map(link => (
+          <div className={styles.Nav__item} key={link.to}>
+            <Link 
+              className={styles.Nav__link} 
+              onClick={closeHandler}
+              href={link.to}
+            >
+              {link.content}
+            </Link>
+          </div>
+        ))}
       </div>
     </div>
   )

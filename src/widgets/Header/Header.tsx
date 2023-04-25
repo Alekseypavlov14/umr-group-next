@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import { TranslateButton } from './components/TranslateButton/TranslateButton'
 import { BurgerButton } from './components/BurgerButton/BurgerButton'
 import { Container } from '@shared/components/Container/Container'
 import { Logo } from '@shared/components/Logo/Logo'
@@ -15,10 +14,7 @@ export const Header: FC<HeaderProps> = () => {
         <div className={styles.HeaderContent}>
           <Logo />
           <Nav />
-          <div className={styles.Buttons}>
-            <TranslateButton />
-            <BurgerButton />
-          </div>
+          <BurgerButton />
         </div>
       </Container>
     </div>

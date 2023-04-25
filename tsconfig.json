@@ -25,7 +25,6 @@
       "@features/*": ["./src/features/*"],
       "@entities/*": ["./src/entities/*"],
       "@shared/*": ["./src/shared/*"],
-      "@data/*": ["./src/data/*"],
       "@styles/*": ["./src/styles/*"]
     }
   },

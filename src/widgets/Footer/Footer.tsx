@@ -1,7 +1,6 @@
 import { FC } from 'react'
-import { contentSelector } from '@features/lang/languageSlice'
-import { useAppSelector } from '@shared/hooks/useAppSelector'
 import { Container } from '@shared/components/Container/Container'
+import { useRoutes } from '@app/routing'
 import { Anchor } from '@shared/components/Anchor/Anchor'
 import Link from 'next/link'
 import styles from './Footer.module.css'
@@ -9,7 +8,7 @@ import styles from './Footer.module.css'
 interface FooterProps {}
 
 export const Footer: FC<FooterProps> = () => {
-  const footer = useAppSelector(contentSelector).footer
+  const links = useRoutes()
 
   return (
     <div className={styles.Footer}>
@@ -20,82 +19,87 @@ export const Footer: FC<FooterProps> = () => {
         <div className={styles.Footer__Columns}>
           <div className={styles.Footer__Column}>
             <div className={styles.Footer__Column__Title}>
-              {footer.navigation.title}
+              Navigation
             </div>
             <div className={styles.Footer__Row}>
               <Link href='/' className={styles.Footer__Row__Link}>
-                {footer.navigation.links[0]}
+                {links[0].content}
               </Link>
             </div>
             <div className={styles.Footer__Row}>
               <Link href='/order' className={styles.Footer__Row__Link}>
-                {footer.navigation.links[1]}
+                {links[1].content}
               </Link>
             </div>
             <div className={styles.Footer__Row}>
               <Link href='/translators' className={styles.Footer__Row__Link}>
-                {footer.navigation.links[2]}
+                {links[2].content}
               </Link>
             </div>
             <div className={styles.Footer__Row}>
               <Link href='/about' className={styles.Footer__Row__Link}>
-                {footer.navigation.links[3]}
+                {links[3].content}
               </Link>
             </div>
             <div className={styles.Footer__Row}>
               <Link href='/contacts' className={styles.Footer__Row__Link}>
-                {footer.navigation.links[4]}
+                {links[4].content}
               </Link>
             </div>
           </div>
           <div className={styles.Footer__Column}>
             <div className={styles.Footer__Column__Title}>
-              {footer.company.title}
+              Company
             </div>
             <div className={styles.Footer__Row}>
-              {footer.company.contacts[0].media}: &nbsp;
+              Telegram: &nbsp;
               <Anchor 
                 className={styles.Footer__Row__Anchor}
                 href='https://telegram.me/aleshapavlov14'
-                children={footer.company.contacts[0].content}
-              />
+              >
+                Oleksii
+              </Anchor>
             </div>
             <div className={styles.Footer__Row}>
-              {footer.company.contacts[1].media}: &nbsp;
+              Google: &nbsp;
               <Anchor 
                 className={styles.Footer__Row__Anchor}
                 href='mailto:aleshapavlov9@gmail.com'
-                children={footer.company.contacts[1].content}
-              />
+              >
+                aleshapavlov9@gmail.com
+              </Anchor>
             </div>
           </div>
           <div className={styles.Footer__Column}>
             <div className={styles.Footer__Column__Title}>
-              {footer.author.title}
+              Author
             </div>
             <div className={styles.Footer__Row}>
-              {footer.author.contacts[0].media}: &nbsp;
+              Telegram: &nbsp;
               <Anchor 
                 className={styles.Footer__Row__Anchor}
                 href='https://telegram.me/aleshapavlov14'
-                children={footer.author.contacts[0].content}
-              />
+              >
+                @aleshapavlov14
+              </Anchor>
             </div>
             <div className={styles.Footer__Row}>
-              {footer.author.contacts[1].media}: &nbsp;
+              Google: &nbsp;
               <Anchor
                 className={styles.Footer__Row__Anchor}
                 href='mailto:aleshapavlov9@gmail.com'
-                children={footer.author.contacts[1].content}
-              />
+              >
+                aleshapavlov9@gmail.com
+              </Anchor>
             </div>
             <div className={styles.Footer__Row}>
-              {footer.author.contacts[2].media}: &nbsp;
+              GitHub: &nbsp;
               <Anchor 
                 className={styles.Footer__Row__Anchor}
                 href='https://github.com/Alekseypavlov14'
-                children={footer.author.contacts[2].content}
-              />
+              >
+                Alekseypavlov14
+              </Anchor>
             </div>
           </div>
         </div>

@@ -1,0 +1,22 @@
+[
+  {
+    "to": "/",
+    "content": "Home"
+  },
+  {
+    "to": "/order",
+    "content": "Order"
+  },
+  {
+    "to": "/translators",
+    "content": "Translators"
+  },
+  {
+    "to": "/about",
+    "content": "About us"
+  },
+  {
+    "to": "/contacts",
+    "content": "Contacts"
+  }
+]
