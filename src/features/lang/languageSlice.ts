@@ -1,4 +1,4 @@
-import { AppState } from './../../app/store'
+import { AppState } from '@app/store'
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { Content } from "../../types/Content"
 import content from '@data/content.json'
