@@ -1,14 +1,13 @@
-import { Suspense, lazy } from 'react'
 import { TextBlock } from "@shared/components/TextBlock/TextBlock"
 import { Container } from "@shared/components/Container/Container"
 import { Service } from "../../types/Service.type"
+import { OrderForm } from '@widgets/OrderForm/OrderForm' 
 import type { Order } from "../../types/Order.type"
 import { useAppSelector } from '@shared/hooks/useAppSelector'
 import { contentSelector } from '@features/lang/languageSlice'
 import servicesData from '@data/services.json'
 import styles from './Order.module.css'
 
-const OrderForm = lazy(() => import('../../widgets/OrderForm/OrderForm'))
 
 export default function Order({ orders }) {
   const OrderPage = useAppSelector(contentSelector).page.order
@@ -31,9 +30,7 @@ export default function Order({ orders }) {
 
       <div className={styles.OrderContent}>
         <Container>
-          <Suspense fallback={<>loading...</>}>
-            <OrderForm orders={orders} />
-          </Suspense>
+          <OrderForm orders={orders} />
         </Container>
       </div>
     </div>

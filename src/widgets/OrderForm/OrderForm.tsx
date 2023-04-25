@@ -21,7 +21,7 @@ interface OrderFormProps {
   orders: Order[]
 }
 
-const OrderForm: FC<OrderFormProps> = ({ orders }) => {
+export const OrderForm: FC<OrderFormProps> = ({ orders }) => {
   const dispatch = useDispatch()
   const order = useAppSelector(orderSelector)
   const additives = useAppSelector(additivesSelector)
@@ -204,5 +204,3 @@ const OrderForm: FC<OrderFormProps> = ({ orders }) => {
     </div>
   )
 }
-
-export default OrderForm

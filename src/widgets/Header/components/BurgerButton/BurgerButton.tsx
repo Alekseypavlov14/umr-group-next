@@ -11,7 +11,7 @@ import styles from './BurgerButton.module.css'
 
 interface BurgerButtonProps {}
 
-const BurgerButton: FC<BurgerButtonProps> = () => {
+export const BurgerButton: FC<BurgerButtonProps> = () => {
   const isOpened = useAppSelector(isOpenedSelector)
   const dispatch = useAppDispatch()
 
@@ -29,5 +29,3 @@ const BurgerButton: FC<BurgerButtonProps> = () => {
     </div>
   )
 }
-
-export { BurgerButton }

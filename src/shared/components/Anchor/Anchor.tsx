@@ -8,7 +8,7 @@ interface AnchorProps {
   className?: string
 }
 
-const Anchor: FC<AnchorProps> = ({
+export const Anchor: FC<AnchorProps> = ({
   href,
   children,
   className
@@ -24,5 +24,3 @@ const Anchor: FC<AnchorProps> = ({
     </a>
   )
 }
-
-export { Anchor }

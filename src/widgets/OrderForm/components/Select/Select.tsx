@@ -13,7 +13,7 @@ interface SelectProps {
   onChange: (e: Option) => void
 }
 
-const Select: FC<SelectProps> = ({
+export const Select: FC<SelectProps> = ({
   options,
   value,
   onChange
@@ -29,5 +29,3 @@ const Select: FC<SelectProps> = ({
     />
   )
 }
-
-export { Select }

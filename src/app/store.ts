@@ -1,12 +1,12 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
-import { langReducer } from '../features/lang/languageSlice'
-import { orderReducer } from '../features/order/orderSlice'
-import { menuReducer } from './../features/menu/menuSlice'
+import { orderReducer } from '@features/order/orderSlice'
+import { langReducer } from '@features/lang/languageSlice'
+import { menuReducer } from '@features/menu/menuSlice'
 
-const store = configureStore({
+export const store = configureStore({
   reducer: { 
-    menu: menuReducer,
     order: orderReducer,
+    menu: menuReducer,
     lang: langReducer
   },
 })
@@ -21,5 +21,3 @@ export type AppThunk<ReturnType = void> = ThunkAction<
   unknown,
   Action<string>
 >
-
-export default store

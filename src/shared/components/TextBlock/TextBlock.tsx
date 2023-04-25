@@ -5,7 +5,7 @@ interface TextBlockProps {
   children: [ReactNode, ReactNode]
 }
 
-const TextBlock: FC<TextBlockProps> = ({
+export const TextBlock: FC<TextBlockProps> = ({
   children
 }) => {
   return (
@@ -15,5 +15,3 @@ const TextBlock: FC<TextBlockProps> = ({
     </div>
   )
 }
-
-export { TextBlock }

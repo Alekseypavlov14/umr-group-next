@@ -9,7 +9,7 @@ interface ButtonProps {
   onClick?: (e: MouseEvent<HTMLAnchorElement>) => void
 }
 
-const Button: FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
   href,
   children,
   outlined,
@@ -25,5 +25,3 @@ const Button: FC<ButtonProps> = ({
     </a>
   )
 }
-
-export { Button }

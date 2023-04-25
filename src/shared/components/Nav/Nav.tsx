@@ -59,7 +59,7 @@ export const Nav: FC<NavProps> = () => {
             className={styles.Nav__link}
             href='/contacts'
           >
-            {links[5]}
+            {links[4]}
           </Link>
         </div>
       </div>

@@ -8,7 +8,7 @@ interface SectionProps {
   withoutImage?: boolean
 }
 
-const Section: FC<SectionProps> = ({ 
+export const Section: FC<SectionProps> = ({ 
   children, 
   withoutImage 
 }) => {
@@ -22,5 +22,3 @@ const Section: FC<SectionProps> = ({
     </div>
   )
 }
-
-export { Section }

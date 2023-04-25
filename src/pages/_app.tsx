@@ -1,11 +1,11 @@
 import type { AppProps } from 'next/app'
+import { Provider } from 'react-redux'
 import { Header } from '@widgets/Header/Header'
 import { Footer } from '@widgets/Footer/Footer'
-import { Provider } from 'react-redux'
-import store from '@app/store'
+import { store } from '@app/store'
 import Head from 'next/head'
-import './../styles/null.css'
-import './../styles/index.css'
+import '@styles/null.css'
+import '@styles/index.css'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (

@@ -7,7 +7,7 @@ interface AdditiveInputProps {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
-const AdditiveInput: FC<AdditiveInputProps> = ({
+export const AdditiveInput: FC<AdditiveInputProps> = ({
   additive,
   onChange
 }) => {
@@ -40,5 +40,3 @@ const AdditiveInput: FC<AdditiveInputProps> = ({
     </label>
   )
 }
-
-export { AdditiveInput }

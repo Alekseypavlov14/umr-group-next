@@ -44,7 +44,7 @@ export const Footer: FC<FooterProps> = () => {
             </div>
             <div className={styles.Footer__Row}>
               <Link href='/contacts' className={styles.Footer__Row__Link}>
-                {footer.navigation.links[5]}
+                {footer.navigation.links[4]}
               </Link>
             </div>
           </div>
