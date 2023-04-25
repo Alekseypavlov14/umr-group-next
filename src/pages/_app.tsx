@@ -19,7 +19,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#000000" />
         <meta
           name="description"
-          content="Web site created using create-react-app"
+          content="UMR Group website"
         />
         <title>UMR Group | Translate</title>
       </Head>
