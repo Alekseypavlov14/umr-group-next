@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react'
 import { useAppSelector } from '@shared/hooks/useAppSelector'
+import { useAppDispatch } from '@shared/hooks/useAppDispatch'
 import { AdditiveInput } from './components/AdditiveInput'
-import { useDispatch } from 'react-redux'
 import { Select } from './components/Select'
 import { mailer } from '@shared/utils/mailer'
 import { Button } from '@shared/components/Button'
@@ -22,7 +22,7 @@ interface OrderFormProps {
 }
 
 export const OrderForm: FC<OrderFormProps> = ({ orders }) => {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   const order = useAppSelector(orderSelector)
   const additives = useAppSelector(additivesSelector)
   const [letter, setLetter] = useState('')
