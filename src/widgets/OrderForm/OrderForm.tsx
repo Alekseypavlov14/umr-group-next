@@ -1,11 +1,11 @@
 import { FC, useEffect, useState } from 'react'
-import { Select } from './components/Select/Select'
+import { Select } from './components/Select'
 import { mailer } from '../../utils/Mailer/Mailer'
 import { countPrice } from '../../utils/CountPrice/CountPrice'
-import { AdditiveInput } from './components/AdditiveInput/AdditiveInput'
+import { AdditiveInput } from './components/AdditiveInput'
 import { useDispatch } from 'react-redux'
 import { Order } from '../../types/Order.type'
-import { Button } from '@shared/components/Button/Button'
+import { Button } from '@shared/components/Button'
 import { useAppSelector } from '@shared/hooks/useAppSelector'
 import { 
   additivesSelector, 
