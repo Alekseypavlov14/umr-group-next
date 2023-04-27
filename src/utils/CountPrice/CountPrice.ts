@@ -1,4 +1,4 @@
-import { Order } from "../../types/Order.type"
+import { Order } from "@features/order"
 
 export function countPrice(order: Order) {
   // set start price

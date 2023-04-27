@@ -1,5 +1,5 @@
-import { AppState } from '@app/store'
 import { createSlice } from '@reduxjs/toolkit'
+import { AppState } from '@app/store'
 
 interface initialStateInterface {
   isOpened: boolean
