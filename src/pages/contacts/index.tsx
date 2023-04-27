@@ -1,4 +1,4 @@
-import { Container } from "@shared/components/Container/Container"
+import { Container } from "@shared/components/Container"
 import { Contact } from "./components/Contact"
 import contacts from './data/contacts.json'
 import styles from './Contacts.module.css'

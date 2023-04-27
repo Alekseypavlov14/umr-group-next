@@ -1,5 +1,5 @@
-import { Section } from "../../shared/components/Section/Section"
-import { TextBlock } from "@shared/components/TextBlock/TextBlock"
+import { TextBlock } from "@shared/components/TextBlock"
+import { Section } from "@shared/components/Section"
 
 export default function About() {
   return (

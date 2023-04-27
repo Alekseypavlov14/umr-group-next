@@ -1,5 +1,5 @@
-import { TextBlock } from "@shared/components/TextBlock/TextBlock"
-import { Section } from "../shared/components/Section/Section"
+import { TextBlock } from "@shared/components/TextBlock"
+import { Section } from "../shared/components/Section"
 import Link from "next/link"
 import styles from './index.module.css'
 

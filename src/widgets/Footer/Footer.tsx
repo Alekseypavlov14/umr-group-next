@@ -1,7 +1,7 @@
 import { FC } from 'react'
-import { Container } from '@shared/components/Container/Container'
+import { Container } from '@shared/components/Container'
 import { useRoutes } from '@app/routing'
-import { Anchor } from '@shared/components/Anchor/Anchor'
+import { Anchor } from '@shared/components/Anchor'
 import Link from 'next/link'
 import styles from './Footer.module.css'
 

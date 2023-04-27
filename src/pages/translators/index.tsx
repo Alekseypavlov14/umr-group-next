@@ -1,6 +1,6 @@
-import { Container } from "@shared/components/Container/Container"
-import { TextBlock } from "@shared/components/TextBlock/TextBlock"
-import { Button } from "@shared/components/Button/Button"
+import { Container } from "@shared/components/Container"
+import { TextBlock } from "@shared/components/TextBlock"
+import { Button } from "@shared/components/Button"
 import styles from './Translators.module.css'
 
 export default function Translators() {
