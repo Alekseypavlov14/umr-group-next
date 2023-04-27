@@ -1,5 +1,5 @@
 import { FC, MouseEvent } from 'react'
-import cn from 'classnames'
+import { clsx } from '@shared/lib/clsx'
 import styles from './Button.module.css'
 
 interface ButtonProps {
@@ -15,11 +15,13 @@ export const Button: FC<ButtonProps> = ({
   outlined,
   onClick
 }) => {
+  const classNames = clsx(styles.Button, outlined && styles.Outlined)
+
   return (
     <a 
-      className={cn(styles.Button, outlined && styles.Outlined)}
-      href={href}
+      className={classNames}
       onClick={onClick}
+      href={href}
     >
       {children}
     </a>

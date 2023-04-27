@@ -1,12 +1,12 @@
 import { FC } from 'react'
 import { useAppDispatch } from '@shared/hooks/useAppDispatch'
 import { useAppSelector } from '@shared/hooks/useAppSelector'
+import { clsx } from '@shared/lib/clsx'
 import { 
   isOpenedSelector,
   open,
   close
 } from '@features/menu'
-import cn from 'classnames'
 import styles from './BurgerButton.module.css'
 
 interface BurgerButtonProps {}
@@ -20,9 +20,11 @@ export const BurgerButton: FC<BurgerButtonProps> = () => {
     else return dispatch(open())
   }
 
+  const classNames = clsx(styles.BurgerButton, isOpened && styles.Clicked)
+
   return (
     <div 
-      className={cn(styles.BurgerButton, isOpened && styles.Clicked)}
+      className={classNames}
       onClick={toggleMenu}
     >
       <span />

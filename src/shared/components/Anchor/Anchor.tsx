@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import cn from 'classnames'
+import { clsx } from '@shared/lib/clsx'
 import styles from './Anchor.module.css'
 
 interface AnchorProps {
@@ -13,12 +13,14 @@ export const Anchor: FC<AnchorProps> = ({
   children,
   className
 }) => {
+  const classNames = clsx(styles.Anchor, className)
+
   return (
     <a
-      className={cn(styles.Anchor, className)}
-      href={href}
-      target='_blank'
+      className={classNames}
       rel='noreferrer'
+      target='_blank'
+      href={href}
     >
       {children}
     </a>
