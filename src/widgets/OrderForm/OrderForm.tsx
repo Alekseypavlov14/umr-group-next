@@ -14,7 +14,7 @@ import {
   updateAdditive, 
   updateDate, 
   updateHour 
-} from '@features/order/orderSlice'
+} from '@features/order'
 import styles from './OrderForm.module.css'
 
 interface OrderFormProps {

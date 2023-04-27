@@ -1,7 +1,7 @@
 import { AppState } from '@app/store'
 import { createSlice } from '@reduxjs/toolkit'
 import { Order } from '../../types/Order.type'
-import { OrderAdditive } from './../../types/OrderAdditive.type'
+import { OrderAdditive } from '../../types/OrderAdditive.type'
 
 interface initialStateInterface extends Order {}
 
