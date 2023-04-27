@@ -1,4 +1,4 @@
-import { Order } from "./../types/Order.type"
+import { Order } from './../types/Order.type'
 
 export function countPrice(order: Order) {
   // set start price

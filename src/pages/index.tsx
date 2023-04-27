@@ -1,6 +1,6 @@
-import { TextBlock } from "@shared/components/TextBlock"
-import { Section } from "../shared/components/Section"
-import Link from "next/link"
+import { TextBlock } from '@shared/components/TextBlock'
+import { Section } from '../shared/components/Section'
+import Link from 'next/link'
 import styles from './index.module.css'
 
 export default function Home() {

@@ -1,4 +1,4 @@
-import { OrderAdditive } from "./OrderAdditive.type"
+import { OrderAdditive } from './OrderAdditive.type'
 
 export interface Order {
   name: string

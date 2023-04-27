@@ -1,6 +1,6 @@
-import { Service, Order } from "@features/order"
-import { TextBlock } from "@shared/components/TextBlock"
-import { Container } from "@shared/components/Container"
+import { Service, Order } from '@features/order'
+import { TextBlock } from '@shared/components/TextBlock'
+import { Container } from '@shared/components/Container'
 import { OrderForm } from '@widgets/OrderForm' 
 import servicesData from './data/services.json'
 import styles from './Order.module.css'
