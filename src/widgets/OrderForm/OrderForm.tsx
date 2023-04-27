@@ -2,15 +2,15 @@ import { FC, useEffect, useState } from 'react'
 import { useAppSelector } from '@shared/hooks/useAppSelector'
 import { AdditiveInput } from './components/AdditiveInput'
 import { useDispatch } from 'react-redux'
-import { countPrice } from '../../utils/CountPrice/CountPrice'
 import { Select } from './components/Select'
-import { mailer } from '../../utils/Mailer/Mailer'
+import { mailer } from '@shared/utils/mailer'
 import { Button } from '@shared/components/Button'
 import { 
   additivesSelector, 
   changeOrder, 
   orderSelector, 
   updateAdditive, 
+  countPrice,
   updateDate, 
   updateHour,
   Order
