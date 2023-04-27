@@ -1,6 +1,6 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 import { orderReducer } from '@features/order/orderSlice'
-import { menuReducer } from '@features/menu/menuSlice'
+import { menuReducer } from '@features/menu'
 
 export const store = configureStore({
   reducer: { 

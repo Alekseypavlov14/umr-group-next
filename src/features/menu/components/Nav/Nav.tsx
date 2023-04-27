@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { isOpenedSelector, close } from '@features/menu/menuSlice'
+import { isOpenedSelector, close } from '@features/menu'
 import { useAppDispatch } from '@shared/hooks/useAppDispatch'
 import { useAppSelector } from '@shared/hooks/useAppSelector'
 import { useRoutes } from '@app/routing'

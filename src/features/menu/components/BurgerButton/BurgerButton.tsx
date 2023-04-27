@@ -5,7 +5,7 @@ import {
   isOpenedSelector,
   open,
   close
-} from '@features/menu/menuSlice'
+} from '@features/menu'
 import cn from 'classnames'
 import styles from './BurgerButton.module.css'
 

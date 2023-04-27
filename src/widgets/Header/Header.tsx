@@ -1,8 +1,7 @@
 import { FC } from 'react'
-import { BurgerButton } from './components/BurgerButton/BurgerButton'
+import { Nav, BurgerButton } from '@features/menu'
 import { Container } from '@shared/components/Container/Container'
 import { Logo } from '@shared/components/Logo/Logo'
-import { Nav } from '@shared/components/Nav/Nav'
 import styles from './Header.module.css'
 
 interface HeaderProps {}
