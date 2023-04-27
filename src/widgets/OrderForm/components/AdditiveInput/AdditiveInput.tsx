@@ -1,5 +1,5 @@
 import { FC, ChangeEvent } from 'react'
-import { Additive } from '../../../../types/Additive.type'
+import { Additive } from '@features/order'
 import styles from './AdditiveInput.module.css'
 
 interface AdditiveInputProps {

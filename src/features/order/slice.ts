@@ -1,7 +1,7 @@
+import { PayloadAction, createSlice } from '@reduxjs/toolkit'
+import { OrderAdditive } from './types/OrderAdditive.type'
 import { AppState } from '@app/store'
-import { createSlice } from '@reduxjs/toolkit'
-import { Order } from '../../types/Order.type'
-import { OrderAdditive } from '../../types/OrderAdditive.type'
+import { Order } from './types/Order.type'
 
 interface initialStateInterface extends Order {}
 
@@ -14,15 +14,11 @@ const initialState: initialStateInterface = {
   hour: 0
 }
 
-type Action<T> = {
-  payload: T
-}
-
 const orderSlice = createSlice({
   name: 'order',
   initialState,
   reducers: {
-    changeOrder(state: initialStateInterface, action: Action<Order>) {
+    changeOrder(state: initialStateInterface, action: PayloadAction<Order>) {
       state.name = action.payload.name
       state.label = action.payload.label
       state.startPrice = action.payload.startPrice
@@ -35,17 +31,17 @@ const orderSlice = createSlice({
       state.date = Date.now()
       state.hour = 0
     },
-    updateAdditive(state, action: Action<OrderAdditive>) {
+    updateAdditive(state, action: PayloadAction<OrderAdditive>) {
       let additive: OrderAdditive = state.additives.find(additive => {
         return additive.name === action.payload.name
       })
       
       additive.isChecked = action.payload.isChecked
     },
-    updateDate(state, action: Action<number>) {
+    updateDate(state, action: PayloadAction<number>) {
       state.date = action.payload
     },
-    updateHour(state, action: Action<number>) {
+    updateHour(state, action: PayloadAction<number>) {
       state.hour = action.payload
     }
   }

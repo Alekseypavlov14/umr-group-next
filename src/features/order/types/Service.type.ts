@@ -1,4 +1,4 @@
-import { Additive } from './Additive.type'
+import { Additive } from '@features/order'
 
 export type Service = {
   name: string

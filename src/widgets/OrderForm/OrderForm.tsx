@@ -4,7 +4,6 @@ import { mailer } from '../../utils/Mailer/Mailer'
 import { countPrice } from '../../utils/CountPrice/CountPrice'
 import { AdditiveInput } from './components/AdditiveInput'
 import { useDispatch } from 'react-redux'
-import { Order } from '../../types/Order.type'
 import { Button } from '@shared/components/Button'
 import { useAppSelector } from '@shared/hooks/useAppSelector'
 import { 
@@ -13,7 +12,8 @@ import {
   orderSelector, 
   updateAdditive, 
   updateDate, 
-  updateHour 
+  updateHour,
+  Order
 } from '@features/order'
 import styles from './OrderForm.module.css'
 

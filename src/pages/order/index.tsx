@@ -1,8 +1,7 @@
-import { TextBlock } from "@shared/components/TextBlock/TextBlock"
-import { Container } from "@shared/components/Container/Container"
-import { Service } from "../../types/Service.type"
-import { OrderForm } from '@widgets/OrderForm/OrderForm' 
-import type { Order } from "../../types/Order.type"
+import { Service, Order } from "@features/order"
+import { TextBlock } from "@shared/components/TextBlock"
+import { Container } from "@shared/components/Container"
+import { OrderForm } from '@widgets/OrderForm' 
 import servicesData from './data/services.json'
 import styles from './Order.module.css'
 
