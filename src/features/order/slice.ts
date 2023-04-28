@@ -1,4 +1,4 @@
-import { ChangeDate, ChangeHour, SelectService, ToggleAdditive } from './action.types'
+import { ChangeDate, ChangeHour, SelectService, ToggleAdditive, UpdateLetter } from './action.types'
 import { getDefaultOrderFromService } from './utils/getDefaultOrderFromService'
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 import { getServiceById } from './utils/getServiceById'
@@ -9,12 +9,14 @@ import services from './data/services.json'
 
 interface initialStateInterface {
   services: Service[]
-  order: Order
+  order: Order,
+  letter: string
 }
 
 const initialState: initialStateInterface = {
   services: services,
-  order: getDefaultOrderFromService(services[0])
+  order: getDefaultOrderFromService(services[0]),
+  letter: ''
 }
 
 const orderSlice = createSlice({
@@ -44,11 +46,18 @@ const orderSlice = createSlice({
 
       const additive = state.order.additives.find(additive => additive.id === id)
       additive.isChecked = isChecked
+    },
+    updateLetter(state, action: PayloadAction<UpdateLetter>) {
+      state.letter = action.payload.letter
+    },
+    resetOrder(state) {
+      state = initialState
     }
   }
 })
 
 export const orderReducer = orderSlice.reducer
-export const { selectService, changeDate, changeHour, toggleAdditive } = orderSlice.actions
+export const { selectService, changeDate, changeHour, toggleAdditive, updateLetter, resetOrder } = orderSlice.actions
 export const servicesSelector = (state: AppState) => state.order.services
 export const orderSelector = (state: AppState) => state.order.order
+export const letterSelector = (state: AppState) => state.order.letter

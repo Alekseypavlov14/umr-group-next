@@ -1,7 +1,7 @@
 import { ChangeEvent } from "react"
+import { getTimeFromEvent } from "../utils/getTimeFromEvent"
 import { useAppDispatch } from "@shared/hooks/useAppDispatch"
 import { changeDate } from "@features/order"
-import { getTimeFromEvent } from "../utils/getTimeFromEvent"
 
 export function useSelectHandler() {
   const dispatch = useAppDispatch()

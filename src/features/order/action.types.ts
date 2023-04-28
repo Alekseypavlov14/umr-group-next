@@ -16,3 +16,7 @@ export interface ToggleAdditive {
   id: Id
   isChecked: boolean
 }
+
+export interface UpdateLetter {
+  letter: string
+}

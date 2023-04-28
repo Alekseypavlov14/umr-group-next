@@ -1,16 +1,13 @@
-import { FC, useState } from 'react'
-import { useAppSelector } from '@shared/hooks/useAppSelector'
+import { FC } from 'react'
 import { AdditiveInput } from './components/AdditiveInput'
 import { ServiceSelect } from './components/ServiceSelect'
-import { orderSelector } from '@features/order'
 import { useAdditives } from './hooks/useAdditives'
 import { LetterField } from './components/LetterField'
+import { OrderButton } from './components/OrderButton'
 import { DateSelect } from './components/DateSelect'
 import { TimeSelect } from './components/TimeSelect'
-import { Button } from '@shared/components/Button'
-import { mailer } from '@shared/utils/mailer'
-import styles from './OrderForm.module.css'
 import { Price } from './components/Price'
+import styles from './OrderForm.module.css'
 
 interface OrderFormProps {}
 
@@ -75,12 +72,7 @@ export const OrderForm: FC<OrderFormProps> = () => {
           <Price />
 
           <div className={styles.OrderButton}>
-            <Button
-              href=''
-              onClick={() => {}}
-            >
-              Order
-            </Button>
+            <OrderButton />
           </div>
         </div>
       </form>

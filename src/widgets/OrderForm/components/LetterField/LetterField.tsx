@@ -1,20 +1,20 @@
-import { ChangeEvent, FC, useState } from 'react'
+import { FC } from 'react'
+import { useUpdateLetterHandler } from './hooks/useUpdateLetterHandler'
+import { useAppSelector } from '@shared/hooks/useAppSelector'
+import { letterSelector } from '@features/order'
 import styles from './LetterField.module.css'
 
 interface LetterFieldProps {}
 
 export const LetterField: FC<LetterFieldProps> = () => {
-  const [value, setValue] = useState('')
-
-  function updateValueHandler(e: ChangeEvent<HTMLTextAreaElement>) {
-    setValue(e.target.value)
-  }
+  const letter = useAppSelector(letterSelector)
+  const updateLetterHandler = useUpdateLetterHandler()
 
   return (
     <textarea 
       className={styles.LetterField}
-      onChange={updateValueHandler}
-      value={value}
+      onChange={updateLetterHandler}
+      value={letter}
       maxLength={500}
       minLength={30}
       wrap='soft'

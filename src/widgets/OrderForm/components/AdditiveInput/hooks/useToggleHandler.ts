@@ -1,6 +1,6 @@
+import { ChangeEvent } from "react"
 import { useAppDispatch } from "@shared/hooks/useAppDispatch"
 import { toggleAdditive } from "@features/order"
-import { ChangeEvent } from "react"
 import { Id } from "@shared/types/Id"
 
 export function useToggleHandler() {

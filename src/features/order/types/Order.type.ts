@@ -1,5 +1,5 @@
-import { Id } from '@shared/types/Id'
 import { OrderAdditive } from './OrderAdditive.type'
+import { Id } from '@shared/types/Id'
 
 export interface Order {
   serviceId: Id
