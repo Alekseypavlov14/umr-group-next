@@ -1,6 +1,8 @@
-import { Additive } from '@features/order'
+import { Additive } from './Additive.type'
+import { Id } from '@shared/types/Id'
 
-export type Service = {
+export interface Service {
+  id: Id
   name: string
   label: string
   startPrice: number

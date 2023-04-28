@@ -1,53 +1,54 @@
+import { ChangeDate, ChangeHour, SelectService, ToggleAdditive } from './action.types'
+import { getDefaultOrderFromService } from './utils/getDefaultOrderFromService'
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
-import { OrderAdditive } from './types/OrderAdditive.type'
+import { getServiceById } from './utils/getServiceById'
 import { AppState } from '@app/store'
+import { Service } from './types/Service.type'
 import { Order } from './types/Order.type'
+import services from './data/services.json'
 
-interface initialStateInterface extends Order {}
+interface initialStateInterface {
+  services: Service[]
+  order: Order
+}
 
 const initialState: initialStateInterface = {
-  name: '',
-  label: '',
-  startPrice: 0,
-  additives: [],
-  date: 0,
-  hour: 0
+  services: services,
+  order: getDefaultOrderFromService(services[0])
 }
 
 const orderSlice = createSlice({
   name: 'order',
   initialState,
   reducers: {
-    changeOrder(state: initialStateInterface, action: PayloadAction<Order>) {
-      state.name = action.payload.name
-      state.label = action.payload.label
-      state.startPrice = action.payload.startPrice
-      state.additives = action.payload.additives.map(additive => ({
-        name: additive.name,
-        label: additive.label,
-        price: additive.price,
-        isChecked: false
-      }))
-      state.date = Date.now()
-      state.hour = 0
+    selectService(state, action: PayloadAction<SelectService>) {
+      const serviceId = action.payload.serviceId
+      const service = getServiceById(state.services, serviceId)
+
+      if (!service) return state
+
+      state.order = getDefaultOrderFromService(service)
     },
-    updateAdditive(state, action: PayloadAction<OrderAdditive>) {
-      let additive: OrderAdditive = state.additives.find(additive => {
-        return additive.name === action.payload.name
-      })
-      
-      additive.isChecked = action.payload.isChecked
+    changeHour(state, action: PayloadAction<ChangeHour>) {
+      const hour = action.payload.hour
+
+      state.order.hour = hour
     },
-    updateDate(state, action: PayloadAction<number>) {
-      state.date = action.payload
+    changeDate(state, action: PayloadAction<ChangeDate>) {
+      const date = action.payload.date
+
+      state.order.date = date
     },
-    updateHour(state, action: PayloadAction<number>) {
-      state.hour = action.payload
+    toggleAdditive(state, action: PayloadAction<ToggleAdditive>) {
+      const { id, isChecked } = action.payload
+
+      const additive = state.order.additives.find(additive => additive.id === id)
+      additive.isChecked = isChecked
     }
   }
 })
 
 export const orderReducer = orderSlice.reducer
-export const { changeOrder, updateAdditive, updateDate, updateHour} = orderSlice.actions
-export const orderSelector = (state: AppState) => state.order
-export const additivesSelector = (state: AppState) => state.order.additives
+export const { selectService, changeDate, changeHour, toggleAdditive } = orderSlice.actions
+export const servicesSelector = (state: AppState) => state.order.services
+export const orderSelector = (state: AppState) => state.order.order

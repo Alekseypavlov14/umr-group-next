@@ -1,12 +1,11 @@
-import { Service, Order } from '@features/order'
 import { TextBlock } from '@shared/components/TextBlock'
 import { Container } from '@shared/components/Container'
 import { OrderForm } from '@widgets/OrderForm' 
-import servicesData from './data/services.json'
+import { Order } from '@features/order'
 import styles from './Order.module.css'
 
 
-export default function Order({ orders }) {
+export default function Order() {
   return (
     <div className={styles.Order}>
       <Container>
@@ -36,33 +35,9 @@ export default function Order({ orders }) {
 
       <div className={styles.OrderContent}>
         <Container>
-          <OrderForm orders={orders} />
+          <OrderForm />
         </Container>
       </div>
     </div>
   )
-}
-
-export async function getServerSideProps() {
-  const services: Service[] = servicesData
-
-  const orders = services.map<Order>(service => ({
-    name: service.name,
-    label: service.label,
-    startPrice: service.startPrice,
-    additives: service.additives.map(additive => ({
-      name: additive.name,
-      label: additive.label,
-      price: additive.price,
-      isChecked: false
-    })),
-    date: Date.now(),
-    hour: 0
-  }))
-  
-  return {
-    props: {
-      orders: orders
-    }
-  }
 }

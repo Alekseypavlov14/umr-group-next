@@ -1,6 +1,6 @@
+import { Id } from "@shared/types/Id"
+
 export interface OrderAdditive {
-  name: string
-  label: string
-  price: number
+  id: Id
   isChecked: boolean
 }

@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "startPrice": 40,
     "label": "Translate (Russian-Romania)",
     "name": "Translate",
@@ -7,16 +8,19 @@
       {
         "name": "outside",
         "label": "Out of city",
-        "price": 15
+        "price": 15,
+        "id": 1
       },
       {
         "name": "transfer",
         "label": "With transfer of translator",
-        "price": -10
+        "price": -10,
+        "id": 2
       }
     ]
   },
   {
+    "id": 2,
     "startPrice": 50,
     "label": "Translate (Romanian-English)",
     "name": "translate/ro-en",
@@ -24,7 +28,8 @@
       {
         "name": "transfer",
         "label": "With transfer of translator",
-        "price": -10
+        "price": -10,
+        "id": 1
       }
     ]
   }

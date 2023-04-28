@@ -1,10 +1,9 @@
+import { Id } from '@shared/types/Id'
 import { OrderAdditive } from './OrderAdditive.type'
 
 export interface Order {
-  name: string
-  label: string
-  startPrice: number
+  serviceId: Id
   additives: OrderAdditive[]
-  date: number,
+  date: number
   hour: number
 }
