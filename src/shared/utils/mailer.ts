@@ -1,5 +1,5 @@
 class Mailer {
-  private subject = 'Замовлення'
+  private subject = 'Order'
   private target = 'umr.translate.group@gmail.com'
 
   send(text: string) {

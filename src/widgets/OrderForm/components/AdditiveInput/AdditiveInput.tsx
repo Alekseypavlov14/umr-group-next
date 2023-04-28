@@ -1,16 +1,15 @@
-import { FC, ChangeEvent } from 'react'
-import { Additive } from '@features/order'
+import { FC } from 'react'
+import { useToggleHandler } from './hooks/useToggleHandler'
+import { OrderAdditive } from '@features/order'
 import styles from './AdditiveInput.module.css'
 
 interface AdditiveInputProps {
-  additive: Additive
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void
+  additive: OrderAdditive
 }
 
-export const AdditiveInput: FC<AdditiveInputProps> = ({
-  additive,
-  onChange
-}) => {
+export const AdditiveInput: FC<AdditiveInputProps> = ({ additive }) => {
+  const toggleHandlerCreator = useToggleHandler()
+
   return (
     <label 
       className={styles.AdditiveContainer}
@@ -19,9 +18,10 @@ export const AdditiveInput: FC<AdditiveInputProps> = ({
       <input 
         id={additive.name}
         className={styles.AdditiveCheckbox}
-        type='checkbox'
+        onChange={toggleHandlerCreator(additive.id)}
+        checked={additive.isChecked}
         name={additive.name} 
-        onChange={onChange}
+        type='checkbox'
       />
 
       <label 

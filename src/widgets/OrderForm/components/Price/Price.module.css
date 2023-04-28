@@ -1,0 +1,10 @@
+.Price {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+.Price span {
+  color: var(--blue-200);
+}

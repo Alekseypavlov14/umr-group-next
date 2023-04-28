@@ -1,6 +1,5 @@
-import { Id } from "@shared/types/Id"
+import { Additive } from "./Additive.type"
 
-export interface OrderAdditive {
-  id: Id
+export interface OrderAdditive extends Additive {
   isChecked: boolean
 }

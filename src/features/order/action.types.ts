@@ -1,4 +1,3 @@
-import { OrderAdditive } from "./types/OrderAdditive.type"
 import { Id } from "@shared/types/Id"
 
 export interface SelectService {
@@ -13,4 +12,7 @@ export interface ChangeDate {
   date: number
 }
 
-export interface ToggleAdditive extends OrderAdditive {}
+export interface ToggleAdditive {
+  id: Id
+  isChecked: boolean
+}

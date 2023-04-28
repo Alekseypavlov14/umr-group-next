@@ -4,7 +4,7 @@ import { Order } from "../types/Order.type"
 
 export function getDefaultOrderFromService(service: Service): Order {
   const additives = service.additives.map<OrderAdditive>(additive => ({
-    id: additive.id,
+    ...additive,
     isChecked: false
   }))
 
