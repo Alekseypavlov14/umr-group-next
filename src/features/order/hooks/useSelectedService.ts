@@ -1,6 +1,6 @@
-import { orderSelector, servicesSelector } from "../slice"
-import { useAppSelector } from "@shared/hooks/useAppSelector"
-import { getServiceById } from "../utils/getServiceById"
+import { orderSelector, servicesSelector } from '../slice'
+import { useAppSelector } from '@shared/hooks/useAppSelector'
+import { getServiceById } from '../utils/getServiceById'
 
 export function useSelectedService() {
   const services = useAppSelector(servicesSelector)

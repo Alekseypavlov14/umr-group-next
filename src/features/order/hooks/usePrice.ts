@@ -1,8 +1,8 @@
-import { useMemo } from "react"
+import { useMemo } from 'react'
 import { TWO_DAYS, EARLY_HOUR, LATE_HOUR, TIME_PRICE_ADDITION } from '../const'
-import { useSelectedService } from "./useSelectedService"
-import { useAppSelector } from "@shared/hooks/useAppSelector"
-import { orderSelector } from "../slice"
+import { useSelectedService } from './useSelectedService'
+import { useAppSelector } from '@shared/hooks/useAppSelector'
+import { orderSelector } from '../slice'
 
 export function usePrice() {
   const order = useAppSelector(orderSelector)

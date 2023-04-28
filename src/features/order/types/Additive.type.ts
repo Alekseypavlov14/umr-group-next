@@ -1,4 +1,4 @@
-import { Id } from "@shared/types/Id"
+import { Id } from '@shared/types/Id'
 
 export interface Additive {
   id: Id

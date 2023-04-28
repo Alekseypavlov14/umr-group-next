@@ -1,4 +1,4 @@
-import { Service } from "@features/order"
+import { Service } from '@features/order'
 import { Option } from '@shared/types/Option'
 
 export function convertServiceToOption(service: Service): Option {

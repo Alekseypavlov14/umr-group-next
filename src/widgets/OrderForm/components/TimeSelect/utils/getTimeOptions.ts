@@ -1,5 +1,5 @@
-import { createHourOption } from "./createHourOption"
-import { Option } from "@shared/types/Option"
+import { createHourOption } from './createHourOption'
+import { Option } from '@shared/types/Option'
 
 const HOURS_IN_DAY = 24
 

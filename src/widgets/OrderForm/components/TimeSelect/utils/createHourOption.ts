@@ -1,4 +1,4 @@
-import { Option } from "@shared/types/Option"
+import { Option } from '@shared/types/Option'
 
 export function createHourOption(hour: number): Option {
   const labelTemplate = hour < 10 ? `0${hour}` : String(hour)

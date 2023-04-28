@@ -1,7 +1,7 @@
-import { letterSelector, resetOrder } from "@features/order"
-import { useAppSelector } from "@shared/hooks/useAppSelector"
-import { useAppDispatch } from "@shared/hooks/useAppDispatch"
-import { mailer } from "@shared/utils/mailer"
+import { letterSelector, resetOrder } from '@features/order'
+import { useAppSelector } from '@shared/hooks/useAppSelector'
+import { useAppDispatch } from '@shared/hooks/useAppDispatch'
+import { mailer } from '@shared/utils/mailer'
 
 export function useSubmit() {
   const dispatch = useAppDispatch()
