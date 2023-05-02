@@ -4,7 +4,6 @@ import { OrderForm } from '@widgets/OrderForm'
 import { Order } from '@features/order'
 import styles from './Order.module.css'
 
-
 export default function Order() {
   return (
     <div className={styles.Order}>
